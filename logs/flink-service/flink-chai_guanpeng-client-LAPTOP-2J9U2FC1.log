@@ -1,0 +1,31 @@
+2026-10-23 08:24:30,635 INFO  org.apache.flink.client.cli.CliFrontend                      [] - --------------------------------------------------------------------------------
+2026-10-23 08:24:30,636 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Starting Command Line Client (Version: 1.11.2, Scala: 2.12, Rev:fe36135, Date:2020-09-09T16:19:03+02:00)
+2026-10-23 08:24:30,636 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  OS current user: chai_guanpeng
+2026-10-23 08:24:30,637 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2026-10-23 08:24:30,637 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  JVM: OpenJDK 64-Bit Server VM - Private Build - 1.8/25.452-b09
+2026-10-23 08:24:30,637 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Maximum heap size: 1732 MiBytes
+2026-10-23 08:24:30,637 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
+2026-10-23 08:24:30,637 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  No Hadoop Dependency available
+2026-10-23 08:24:30,637 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  JVM Options:
+2026-10-23 08:24:30,637 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -Dlog.file=/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/log/flink-chai_guanpeng-client-LAPTOP-2J9U2FC1.log
+2026-10-23 08:24:30,638 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -Dlog4j.configuration=file:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/conf/log4j-cli.properties
+2026-10-23 08:24:30,638 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -Dlog4j.configurationFile=file:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/conf/log4j-cli.properties
+2026-10-23 08:24:30,638 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     -Dlogback.configurationFile=file:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/conf/logback.xml
+2026-10-23 08:24:30,638 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Program Arguments:
+2026-10-23 08:24:30,638 INFO  org.apache.flink.client.cli.CliFrontend                      [] -     --version
+2026-10-23 08:24:30,638 INFO  org.apache.flink.client.cli.CliFrontend                      [] -  Classpath: /home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/flink-csv-1.11.2.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/flink-json-1.11.2.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/flink-shaded-zookeeper-3.4.14.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/flink-table-blink_2.12-1.11.2.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/flink-table_2.12-1.11.2.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/log4j-1.2-api-2.12.1.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/log4j-api-2.12.1.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/log4j-core-2.12.1.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/log4j-slf4j-impl-2.12.1.jar:/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/lib/flink-dist_2.12-1.11.2.jar:::
+2026-10-23 08:24:30,638 INFO  org.apache.flink.client.cli.CliFrontend                      [] - --------------------------------------------------------------------------------
+2026-10-23 08:24:30,641 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, localhost
+2026-10-23 08:24:30,641 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2026-10-23 08:24:30,642 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1024m
+2026-10-23 08:24:30,642 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2026-10-23 08:24:30,642 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 2
+2026-10-23 08:24:30,642 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2026-10-23 08:24:30,642 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2026-10-23 08:24:30,642 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.home, /usr/lib/jvm/java-8-openjdk-amd64
+2026-10-23 08:24:30,642 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+2026-10-23 08:24:30,654 INFO  org.apache.flink.client.cli.CliFrontend                      [] - Loading FallbackYarnSessionCli
+2026-10-23 08:24:30,674 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2026-10-23 08:24:30,698 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2026-10-23 08:24:30,701 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-488636828953642833.conf.
+2026-10-23 08:24:30,708 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.

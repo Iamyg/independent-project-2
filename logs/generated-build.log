@@ -1,0 +1,41 @@
+COMMAND: ["mvn", "-B", "-f", "/mnt/d/Learning/HKUST/ip/repro/generated/generated-code/pom.xml", "-DskipTests", "package"]
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.hkust:generated-code >----------------------
+[INFO] Building generated-code 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ generated-code ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/d/Learning/HKUST/ip/repro/generated/generated-code/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ generated-code ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- scala-maven-plugin:3.3.2:compile (default) @ generated-code ---
+[INFO] /mnt/d/Learning/HKUST/ip/repro/generated/generated-code/src/main/scala:-1: info: compiling
+[INFO] Compiling 5 source files to /mnt/d/Learning/HKUST/ip/repro/generated/generated-code/target/classes at 1792743440449
+[INFO] prepare-compile in 0 s
+[INFO] compile in 3 s
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ generated-code ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/d/Learning/HKUST/ip/repro/generated/generated-code/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ generated-code ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ generated-code ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ generated-code ---
+[INFO] Building jar: /mnt/d/Learning/HKUST/ip/repro/generated/generated-code/target/generated-code-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:single (default) @ generated-code ---
+[INFO] Building jar: /mnt/d/Learning/HKUST/ip/repro/generated/generated-code/target/generated-code-1.0-SNAPSHOT-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.620 s
+[INFO] Finished at: 2026-10-23T08:17:29Z
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,3 @@
+COMMAND: ["bash", "/mnt/d/Learning/HKUST/ip/setup/cquirrel.sh", "start"]
+Port 8081 already serves Flink; reusing the running service.
+Flink ready. Windows dashboard: http://172.17.218.172:8081

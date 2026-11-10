@@ -1,0 +1,4 @@
+Looking in links: cache/wheels
+Processing ./cache/wheels/duckdb-1.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Installing collected packages: duckdb
+Successfully installed duckdb-1.1.3

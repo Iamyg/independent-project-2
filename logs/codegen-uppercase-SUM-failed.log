@@ -1,0 +1,59 @@
+COMMAND: ["java", "-jar", "/mnt/d/Learning/HKUST/ip/repro/tools/codegen-1.0-SNAPSHOT.jar", "-q", "SELECT l_orderkey, o_orderdate, o_shippriority,\n       SUM(l_extendedprice * (1 - l_discount)) AS revenue\nFROM customer, orders, lineitem\nWHERE c_mktsegment = 'AUTOMOBILE'\n  AND c_custkey = o_custkey\n  AND l_orderkey = o_orderkey\n  AND o_orderdate < DATE '1995-03-13'\n  AND l_shipdate > DATE '1995-03-13'\nGROUP BY l_orderkey, o_orderdate, o_shippriority;\n", "-j", "/mnt/d/Learning/HKUST/ip/repro/queries/q3.generated.json", "-g", "/mnt/d/Learning/HKUST/ip/repro/generated", "-i", "file:///mnt/d/Learning/HKUST/ip/repro/data/micro/03_two_details/events.txt", "-o", "file:///mnt/d/Learning/HKUST/ip/repro/tmp/default-output.txt", "-s", "file"]
+
+Cquirrel -- CodeGen
+
+SELECT l_orderkey, o_orderdate, o_shippriority,
+       SUM(l_extendedprice * (1 - l_discount)) AS revenue
+FROM customer, orders, lineitem
+WHERE c_mktsegment = 'AUTOMOBILE'
+  AND c_custkey = o_custkey
+  AND l_orderkey = o_orderkey
+  AND o_orderdate < DATE '1995-03-13'
+  AND l_shipdate > DATE '1995-03-13'
+GROUP BY l_orderkey, o_orderdate, o_shippriority;
+
+SELECT l_orderkey, o_orderdate, o_shippriority
+	, SUM(l_extendedprice * (1 - l_discount)) AS revenue
+FROM customer, orders, lineitem
+WHERE c_mktsegment = 'AUTOMOBILE'
+	AND c_custkey = o_custkey
+	AND l_orderkey = o_orderkey
+	AND o_orderdate < DATE '1995-03-13'
+	AND l_shipdate > DATE '1995-03-13'
+GROUP BY l_orderkey, o_orderdate, o_shippriority;
+size is:1
+groupByAttribute: [l_orderkey, o_orderdate, o_shippriority]
+aggregation: [SUM(l_extendedprice * (1 - l_discount))]
+table:[lineitem, orders, customer]
+subqueryString: null
+c_mktsegment = 'AUTOMOBILE'
+	AND c_custkey = o_custkey
+	AND l_orderkey = o_orderkey
+	AND o_orderdate < DATE '1995-03-13'
+	AND l_shipdate > DATE '1995-03-13'
+SUM(l_extendedprice * (1 - l_discount)) AS revenue true SUM(l_extendedprice * (1 - l_discount))
+o_orderdate false 
+o_shippriority false 
+l_orderkey false 
+{null=lineitem}
+Tables : [customer, orders, lineitem]
+Manipulation : Select
+fields : [UNKNOWN.l_orderkey, UNKNOWN.o_orderdate, UNKNOWN.o_shippriority, UNKNOWN.l_extendedprice, UNKNOWN.l_discount, UNKNOWN.c_mktsegment, UNKNOWN.c_custkey, UNKNOWN.o_custkey, UNKNOWN.o_orderkey, UNKNOWN.l_shipdate]
+java.lang.IllegalArgumentException: Got null
+	at org.hkust.objects.Operator.getOperator(Operator.java:39)
+	at org.hkust.jsonutils.JsonParser.makeAggregateValue(JsonParser.java:165)
+	at org.hkust.jsonutils.JsonParser.makeAggregateValues(JsonParser.java:157)
+	at org.hkust.jsonutils.JsonParser.lambda$makeAggregateProcessFunctions$2(JsonParser.java:99)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.hkust.jsonutils.JsonParser.makeAggregateProcessFunctions(JsonParser.java:97)
+	at org.hkust.jsonutils.JsonParser.parse(JsonParser.java:32)
+	at org.hkust.codegenerator.CodeGenerator.generate(CodeGenerator.java:25)
+	at CodeGen.run(CodeGen.java:216)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1939)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at CodeGen.main(CodeGen.java:42)
