@@ -1,0 +1,8 @@
+{
+  "name": "09_delete_last_detail",
+  "category": "micro",
+  "events": 4,
+  "input_sha256": "3e4170cf6bc0614b2ad6c38979967663aaefdd80e09a025a1c1289e79ca6102a",
+  "description": "",
+  "expected": []
+}

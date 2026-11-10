@@ -1,0 +1,8 @@
+{
+  "name": "delete_order",
+  "category": "tpch",
+  "events": 7656,
+  "input_sha256": "0edc7cb8b0f044efea5516db7996c1b56fdc7b9ff661fa968019560c215f6ba7",
+  "description": "TPC-H SF=0.001",
+  "expected": null
+}

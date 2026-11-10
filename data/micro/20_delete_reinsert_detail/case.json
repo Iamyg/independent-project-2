@@ -1,0 +1,15 @@
+{
+  "name": "20_delete_reinsert_detail",
+  "category": "micro",
+  "events": 5,
+  "input_sha256": "6b7bdd61656273c43c3bc332ee6f8d74760b37689e3affd850e48598275ee3df",
+  "description": "",
+  "expected": [
+    [
+      101,
+      "1995-03-01",
+      0,
+      "900"
+    ]
+  ]
+}

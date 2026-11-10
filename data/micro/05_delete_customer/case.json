@@ -1,0 +1,8 @@
+{
+  "name": "05_delete_customer",
+  "category": "micro",
+  "events": 6,
+  "input_sha256": "4ceeed43a23b4bd20d5e02368cf09be186c48350f50bf41d2cd02719c9299d22",
+  "description": "Independent replay of lifecycle prefix.",
+  "expected": []
+}

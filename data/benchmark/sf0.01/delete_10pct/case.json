@@ -1,0 +1,10 @@
+{
+  "scale_factor": 0.01,
+  "scenario": "delete_10pct",
+  "input": "data/benchmark/sf0.01/delete_10pct/events.txt",
+  "input_events": 82693,
+  "insertions": 76675,
+  "deletions": 6018,
+  "input_sha256": "43158de398cdb48eb5072667f17d57260ece724669c15e63ea296163a443e82f",
+  "expected_groups": 101
+}

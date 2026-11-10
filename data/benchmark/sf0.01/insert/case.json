@@ -1,0 +1,10 @@
+{
+  "scale_factor": 0.01,
+  "scenario": "insert",
+  "input": "data/benchmark/sf0.01/insert/events.txt",
+  "input_events": 76675,
+  "insertions": 76675,
+  "deletions": 0,
+  "input_sha256": "be4b87097da2c280a60af4b3566138cfcb94a3ee94af263a766b5256044440aa",
+  "expected_groups": 107
+}

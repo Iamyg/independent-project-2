@@ -1,0 +1,8 @@
+{
+  "name": "16_missing_customer",
+  "category": "micro",
+  "events": 3,
+  "input_sha256": "a3b188f15e9aa8d50038524327c205605f6c9e243b06bb26debf8fd8842f50ee",
+  "description": "",
+  "expected": []
+}

@@ -1,0 +1,8 @@
+{
+  "name": "delete_lineitems",
+  "category": "tpch",
+  "events": 7658,
+  "input_sha256": "c4522f8433f092d004598410d40ff6ff6b0532ac2033161222c78df3efadf689",
+  "description": "TPC-H SF=0.001",
+  "expected": null
+}

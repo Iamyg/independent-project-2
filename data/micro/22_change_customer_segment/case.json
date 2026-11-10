@@ -1,0 +1,8 @@
+{
+  "name": "22_change_customer_segment",
+  "category": "micro",
+  "events": 5,
+  "input_sha256": "5accef0ca4ee100499896d9aed934b1dc4c6247c20a720b6d9e96c86956072f4",
+  "description": "",
+  "expected": []
+}

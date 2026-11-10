@@ -1,0 +1,8 @@
+{
+  "name": "delete_customer",
+  "category": "tpch",
+  "events": 7656,
+  "input_sha256": "d6b36b6579260740370dfe39fdc477696f9642efc588586225829d3ca27fc741",
+  "description": "TPC-H SF=0.001",
+  "expected": null
+}

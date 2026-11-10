@@ -1,0 +1,15 @@
+{
+  "name": "03_two_details",
+  "category": "micro",
+  "events": 4,
+  "input_sha256": "bce633aca88bc570c04cd3aaa60b5058d090ffee0d01f831fc7f85036a5d8f43",
+  "description": "Independent replay of lifecycle prefix.",
+  "expected": [
+    [
+      101,
+      "1995-03-01",
+      0,
+      "1300"
+    ]
+  ]
+}

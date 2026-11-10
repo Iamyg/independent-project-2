@@ -1,0 +1,8 @@
+{
+  "name": "07_delete_order",
+  "category": "micro",
+  "events": 5,
+  "input_sha256": "df2e499212fac17da1314065787509ce0404b5731846f8dbf96381205d735879",
+  "description": "",
+  "expected": []
+}

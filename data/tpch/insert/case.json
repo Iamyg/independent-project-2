@@ -1,0 +1,8 @@
+{
+  "name": "insert",
+  "category": "tpch",
+  "events": 7655,
+  "input_sha256": "227b13bb619fce8b0aa9e910f8b3a3a9d114358192ebd30bcf334455b240b58a",
+  "description": "TPC-H SF=0.001",
+  "expected": null
+}

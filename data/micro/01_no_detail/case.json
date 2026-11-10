@@ -1,0 +1,8 @@
+{
+  "name": "01_no_detail",
+  "category": "micro",
+  "events": 2,
+  "input_sha256": "1c0336af669c008b644a4ebee9f6e42ef357585e935ac18d511b786a61b01133",
+  "description": "Independent replay of lifecycle prefix.",
+  "expected": []
+}

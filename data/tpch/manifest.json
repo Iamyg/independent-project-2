@@ -1,0 +1,50 @@
+[
+  {
+    "name": "insert",
+    "category": "tpch",
+    "events": 7655,
+    "input_sha256": "227b13bb619fce8b0aa9e910f8b3a3a9d114358192ebd30bcf334455b240b58a",
+    "description": "TPC-H SF=0.001",
+    "expected": null
+  },
+  {
+    "name": "delete_lineitems",
+    "category": "tpch",
+    "events": 7658,
+    "input_sha256": "c4522f8433f092d004598410d40ff6ff6b0532ac2033161222c78df3efadf689",
+    "description": "TPC-H SF=0.001",
+    "expected": null
+  },
+  {
+    "name": "delete_order",
+    "category": "tpch",
+    "events": 7656,
+    "input_sha256": "0edc7cb8b0f044efea5516db7996c1b56fdc7b9ff661fa968019560c215f6ba7",
+    "description": "TPC-H SF=0.001",
+    "expected": null
+  },
+  {
+    "name": "delete_customer",
+    "category": "tpch",
+    "events": 7656,
+    "input_sha256": "d6b36b6579260740370dfe39fdc477696f9642efc588586225829d3ca27fc741",
+    "description": "TPC-H SF=0.001",
+    "expected": null
+  },
+  {
+    "name": "mixed_restore",
+    "category": "tpch",
+    "events": 7660,
+    "input_sha256": "0c99a1b2c60e11a9eb4242257620b4511c5ee07c92965f4632b236f2946ffb8a",
+    "description": "TPC-H SF=0.001",
+    "expected": null
+  },
+  {
+    "name": "late_parents",
+    "category": "tpch",
+    "events": 7655,
+    "input_sha256": "31c0fdfca5f3ae77ad8d22c120ac3e03331c3fc77804df6a3fd9c8e00b8a0f63",
+    "description": "TPC-H SF=0.001",
+    "expected": null
+  }
+]

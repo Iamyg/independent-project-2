@@ -1,0 +1,254 @@
+[
+  {
+    "name": "01_no_detail",
+    "category": "micro",
+    "events": 2,
+    "input_sha256": "1c0336af669c008b644a4ebee9f6e42ef357585e935ac18d511b786a61b01133",
+    "description": "Independent replay of lifecycle prefix.",
+    "expected": []
+  },
+  {
+    "name": "02_one_detail",
+    "category": "micro",
+    "events": 3,
+    "input_sha256": "d9e5de8215f8ddfc216dd7a1e3bd0bd66088ab900bf07f71e17f00d7d915844c",
+    "description": "Independent replay of lifecycle prefix.",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "900"
+      ]
+    ]
+  },
+  {
+    "name": "03_two_details",
+    "category": "micro",
+    "events": 4,
+    "input_sha256": "bce633aca88bc570c04cd3aaa60b5058d090ffee0d01f831fc7f85036a5d8f43",
+    "description": "Independent replay of lifecycle prefix.",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "1300"
+      ]
+    ]
+  },
+  {
+    "name": "04_delete_detail",
+    "category": "micro",
+    "events": 5,
+    "input_sha256": "2a5dbe4dc863da0e58fd1db46ff62001a16cfe10e4ed551b29031cbb8af3de99",
+    "description": "Independent replay of lifecycle prefix.",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "400"
+      ]
+    ]
+  },
+  {
+    "name": "05_delete_customer",
+    "category": "micro",
+    "events": 6,
+    "input_sha256": "4ceeed43a23b4bd20d5e02368cf09be186c48350f50bf41d2cd02719c9299d22",
+    "description": "Independent replay of lifecycle prefix.",
+    "expected": []
+  },
+  {
+    "name": "06_restore_customer",
+    "category": "micro",
+    "events": 7,
+    "input_sha256": "4fe6225ffeded9594f1c8092fade66d03d87a785e424b0e71b2efd015d4cb657",
+    "description": "Independent replay of lifecycle prefix.",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "400"
+      ]
+    ]
+  },
+  {
+    "name": "07_delete_order",
+    "category": "micro",
+    "events": 5,
+    "input_sha256": "df2e499212fac17da1314065787509ce0404b5731846f8dbf96381205d735879",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "08_restore_order",
+    "category": "micro",
+    "events": 6,
+    "input_sha256": "ffaf14f88d0a7fb84f93c7fcb8aea9449188001267d4183d21cfc01b937a5920",
+    "description": "",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "1300"
+      ]
+    ]
+  },
+  {
+    "name": "09_delete_last_detail",
+    "category": "micro",
+    "events": 4,
+    "input_sha256": "3e4170cf6bc0614b2ad6c38979967663aaefdd80e09a025a1c1289e79ca6102a",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "10_late_parents",
+    "category": "micro",
+    "events": 4,
+    "input_sha256": "2b4f95a49c415f710894f70254c7428e991ee90f7e755e87bbeae024782c4512",
+    "description": "",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "1300"
+      ]
+    ]
+  },
+  {
+    "name": "11_wrong_segment",
+    "category": "micro",
+    "events": 3,
+    "input_sha256": "3d3e1b02c368e4b8255d750b3f189b2047f983d8e830ffae82abddf80bba9743",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "12_order_date_boundary",
+    "category": "micro",
+    "events": 3,
+    "input_sha256": "2dc1d060c15063de566f7925b81dce86f41d1d2f305ce5f03460ac46d00db3df",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "13_ship_date_boundary",
+    "category": "micro",
+    "events": 3,
+    "input_sha256": "4d34fb11205ea0bf68d68e67fff10ab02790e4b575237bae7c75a1513c164b0a",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "14_future_order",
+    "category": "micro",
+    "events": 3,
+    "input_sha256": "bf0eaaf7dee4ee60f3bcc306fd25824eca92f044e13f4b0544b7327cedac5d73",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "15_early_shipment",
+    "category": "micro",
+    "events": 3,
+    "input_sha256": "225fddf610b1c5834989f90d6118cd7e9c2166c50c82217e340e3c01c00f65ef",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "16_missing_customer",
+    "category": "micro",
+    "events": 3,
+    "input_sha256": "a3b188f15e9aa8d50038524327c205605f6c9e243b06bb26debf8fd8842f50ee",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "17_missing_order",
+    "category": "micro",
+    "events": 3,
+    "input_sha256": "27324bd0dae69ede349cd7dc95ee67355a4df33ef14f9a4a455f251eaf470556",
+    "description": "",
+    "expected": []
+  },
+  {
+    "name": "18_two_orders",
+    "category": "micro",
+    "events": 5,
+    "input_sha256": "dc319e5ec3e5a8501d6a41034a2de4fc14624dd95d0f74902c7e6529cdf3f9d5",
+    "description": "",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "900"
+      ],
+      [
+        102,
+        "1995-03-01",
+        0,
+        "900"
+      ]
+    ]
+  },
+  {
+    "name": "19_delete_filtered_detail",
+    "category": "micro",
+    "events": 5,
+    "input_sha256": "e8650e4528575ab65eba827f58f0193d3e70ac5f213c90b17e221a043e1db798",
+    "description": "",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "900"
+      ]
+    ]
+  },
+  {
+    "name": "20_delete_reinsert_detail",
+    "category": "micro",
+    "events": 5,
+    "input_sha256": "6b7bdd61656273c43c3bc332ee6f8d74760b37689e3affd850e48598275ee3df",
+    "description": "",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "900"
+      ]
+    ]
+  },
+  {
+    "name": "21_update_discount",
+    "category": "micro",
+    "events": 5,
+    "input_sha256": "01ab4cdbe9efb636f3cdfde5766487160abbcb78357749cd4cf09471e9ac2c63",
+    "description": "",
+    "expected": [
+      [
+        101,
+        "1995-03-01",
+        0,
+        "750"
+      ]
+    ]
+  },
+  {
+    "name": "22_change_customer_segment",
+    "category": "micro",
+    "events": 5,
+    "input_sha256": "5accef0ca4ee100499896d9aed934b1dc4c6247c20a720b6d9e96c86956072f4",
+    "description": "",
+    "expected": []
+  }
+]

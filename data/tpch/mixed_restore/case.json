@@ -1,0 +1,8 @@
+{
+  "name": "mixed_restore",
+  "category": "tpch",
+  "events": 7660,
+  "input_sha256": "0c99a1b2c60e11a9eb4242257620b4511c5ee07c92965f4632b236f2946ffb8a",
+  "description": "TPC-H SF=0.001",
+  "expected": null
+}

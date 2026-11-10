@@ -1,0 +1,2 @@
++CU1|Customer#1|Address|0|00-000|0.00|AUTOMOBILE|fixture|
++OR101|1|O|1500.00|1995-03-01|1-URGENT|Clerk#1|0|fixture|

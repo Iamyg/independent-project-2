@@ -1,0 +1,8 @@
+{
+  "name": "15_early_shipment",
+  "category": "micro",
+  "events": 3,
+  "input_sha256": "225fddf610b1c5834989f90d6118cd7e9c2166c50c82217e340e3c01c00f65ef",
+  "description": "",
+  "expected": []
+}
