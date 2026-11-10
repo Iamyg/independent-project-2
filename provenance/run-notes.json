@@ -1,0 +1,20 @@
+{
+  "issues": [
+    {
+      "issue": "Uppercase SUM is not recognized by the release SQL-to-JSON aggregation switch.",
+      "evidence": "logs/codegen-uppercase-SUM-failed.log",
+      "resolution": "Use semantically identical lowercase sum; retain generated JSON and verify generated files/JAR rather than relying only on CodeGen exit status."
+    },
+    {
+      "issue": "The first outer all shell reported a trailing syntax error after Python had completed and summarized all 28 experiments, because the shell file was edited while that invocation was still reading it.",
+      "impact": "The 28 Flink jobs and comparison artifacts completed successfully; initial outer shell exit status was 1.",
+      "resolution": "Final saved shell passed bash -n; a fresh invocation through Windows run.ps1 report exited 0, regenerated the reports, and all 309 indexed artifact hashes and 28 FINISHED job records were checked. Do not edit the launcher during an active run."
+    }
+  ],
+  "adaptations": [
+    "Query conditions follow paper section 2: AUTOMOBILE and 1995-03-13.",
+    "Generated Job.scala accepts --input and --output and emits canonical date/numeric fields; patch and original sources are retained.",
+    "Latest per-group aggregate values are used, not summed output rows or input-sequence sorting.",
+    "Near-zero final aggregates are treated as empty-group sentinels only for the strictly-positive-contribution datasets in this reproduction."
+  ]
+}

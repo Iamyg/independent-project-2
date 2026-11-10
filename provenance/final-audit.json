@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "hashed_artifacts_checked": 309,
+  "artifact_hash_mismatches": 0,
+  "unique_flink_jobs": 28,
+  "finished_flink_jobs": 28,
+  "passed_comparisons": 28,
+  "micro_cases": 22,
+  "tpch_cases": 6,
+  "verifier_negative_checks": 6,
+  "maximum_observed_amount_error": "0.00000000001",
+  "windows_report_entrypoint_exit_code": 0,
+  "upstream_unit_test_suite": "not run; generated Maven builds use -DskipTests",
+  "scope": "Q3 functional reproduction with bounded update-stream replays, parallelism 1"
+}

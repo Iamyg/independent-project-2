@@ -1,0 +1,450 @@
+{
+  "commit": "501cfde6dc2968cfccee992ab4f298c499cc8028",
+  "files": [
+    {
+      "path": "DemoTools/DataGenerator/DataGenerator.py",
+      "sha": "cd9ce2498267757ff715032a5b5eeaea1603fc56",
+      "size": 16005
+    },
+    {
+      "path": "DemoTools/DataGenerator/config.ini",
+      "sha": "3f3bc188594c0d63e952442a9cf18e1032cc35fd",
+      "size": 828
+    },
+    {
+      "path": "DemoTools/DataGenerator/config_all.ini",
+      "sha": "0a6093865f5af8aa8499d5babca605524e84e758",
+      "size": 834
+    },
+    {
+      "path": "DemoTools/DataGenerator/test_config.ini",
+      "sha": "41ee0b1a69d966f7c849edd3f1fb4f68abb75f1f",
+      "size": 846
+    },
+    {
+      "path": "DemoTools/DataGenerator/test_config_kafka.ini",
+      "sha": "5d76a258b5b633172932c18413f756e0454e5062",
+      "size": 838
+    },
+    {
+      "path": "DemoTools/DataGenerator/tests.py",
+      "sha": "1380bb31ae66b659e85861f814f646f840fd5bbe",
+      "size": 20877
+    },
+    {
+      "path": "LICENSE",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149
+    },
+    {
+      "path": "README.md",
+      "sha": "09ff32090090fce840286c67ccbe84d5d4ca4e33",
+      "size": 5828
+    },
+    {
+      "path": "codegen/README.md",
+      "sha": "1f1d1b02b45c6ded32fdc4f1530d09334b524aae",
+      "size": 8059
+    },
+    {
+      "path": "codegen/pom.xml",
+      "sha": "66117e576033389600210e235ac42aeb95b4a5d2",
+      "size": 4318
+    },
+    {
+      "path": "codegen/src/main/java/CodeGen.java",
+      "sha": "75042662482b389d370fae4b5a094b401dfee666",
+      "size": 10571
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/annotations/Consider.java",
+      "sha": "994d0d4aae8a2f7b0da3aa9f5c3b9c825feeea56",
+      "size": 328
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/annotations/PerformanceImplications.java",
+      "sha": "5ab36d30a07baaa530fa99d2b593801fa8dd8548",
+      "size": 354
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/annotations/ToBeRefactored.java",
+      "sha": "d37b0278c707ec96aa8a12bfeebbefc0b70df35f",
+      "size": 314
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/annotations/ToBeTested.java",
+      "sha": "7851545ed18d201e3f989c35dff036c197e608b4",
+      "size": 341
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/checkerutils/CheckerUtils.java",
+      "sha": "75648379a50d0ccb19f0f58a0d783bc261899d40",
+      "size": 915
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/AggregateProcessFunctionWriter.java",
+      "sha": "28f29fc8562954974e7849906c6c4886c476f7b6",
+      "size": 12053
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/ClassWriter.java",
+      "sha": "953db77df57a0f0164e8565dd510707d3edab75f",
+      "size": 1059
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/CodeGenerator.java",
+      "sha": "85a1199a46211c41762c9deed77204f6f5f4bd01",
+      "size": 3577
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/CountDistinctProcessFunctionWriter.java",
+      "sha": "f4d2c27fc2ea3ff0e05c219458ca98ab039ffc47",
+      "size": 3612
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/MainClassWriter.java",
+      "sha": "9abf3594edad8ed9b0a7517977fa47fbf45c60e6",
+      "size": 29756
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/MultipleAggregateTypeWriter.java",
+      "sha": "0e7e9f67cc25c5627578219035f14df9d9215a9a",
+      "size": 5335
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/ProcessFunctionWriter.java",
+      "sha": "f141c580ac34f859a009e723b8ee075a373eaca8",
+      "size": 12103
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/RelationProcessFunctionWriter.java",
+      "sha": "d88373bb41f17f73856ed20ad4e8c9e39ed2adb8",
+      "size": 7172
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/codegenerator/TransformerFunctionWriter.java",
+      "sha": "c70c3295b7d6c305b54449756b8371cded34e037",
+      "size": 2671
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/jsonutils/JsonParser.java",
+      "sha": "a84453355f4f2df7e5890d61cf6b99d39572d408",
+      "size": 11145
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/AggregateAttributeValue.java",
+      "sha": "17effbe4e45234689e8459c41c85c30737b2f3b9",
+      "size": 880
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/AggregateProcessFunction.java",
+      "sha": "0c237b1b9a12de198d65ffbd19a68786291d3b24",
+      "size": 3023
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/AggregateValue.java",
+      "sha": "faf34d8bfc43e2b4761c1779e644138b12a26c25",
+      "size": 970
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/AttributeValue.java",
+      "sha": "08f4fff6211cf816efcd2bdd3449d4f3d46d6602",
+      "size": 1106
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/ConstantValue.java",
+      "sha": "9a26349772fac2cce2c22df006c5e4356ce35f07",
+      "size": 1435
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/DistinctCountProcessFunction.java",
+      "sha": "5c2bc1147b19203287a4e86e747b6ccf5744c254",
+      "size": 3429
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/Expression.java",
+      "sha": "931c6660e1eb3498eae717bad210f1a831bc5db0",
+      "size": 2055
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/Node.java",
+      "sha": "db3ef46ca78f57ba69de1c48af5a40ded092b4fe",
+      "size": 1799
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/Operator.java",
+      "sha": "b3bc9abf1db004ad3bcd71dbda88950e957ee0ab",
+      "size": 1190
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/Position.java",
+      "sha": "9e42f637c6c30c26207caa81531452abd7fe3410",
+      "size": 254
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/ProcessFunction.java",
+      "sha": "ae0a8acb29a2479bbe2d7a376c018915016adefa",
+      "size": 1561
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/RelationProcessFunction.java",
+      "sha": "f5ebaab675aa85b27ab695cbeabf0f9ca3c707ea",
+      "size": 5452
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/SelectCondition.java",
+      "sha": "bcbe21a7ade0f6be0a3c25864d9c576772b4b443",
+      "size": 1132
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/TransformerFunction.java",
+      "sha": "a89f46d96030c860426e5a329b458219301148e7",
+      "size": 899
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/Type.java",
+      "sha": "74c05c9878cccad174a51e8ea1a6d47ee726c2db",
+      "size": 1647
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/objects/Value.java",
+      "sha": "e7ea062158b32b662de6dc30adbf8db7960b4ed1",
+      "size": 55
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/parser/ExportTableAliasVisitor.java",
+      "sha": "ea2077e2f84d61acdb22e0c59339eba442187806",
+      "size": 1568
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/parser/Parser.java",
+      "sha": "8646f040841203d0a49879024ba7fa932064d912",
+      "size": 7158
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/parser/SQLToJSONWriter.java",
+      "sha": "d859deafcda7cb61cbd1a6f8eeda1921cefe4a26",
+      "size": 37562
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/schema/Attribute.java",
+      "sha": "a25a5d7ca8c1bd51e1be6fbd6061668687050804",
+      "size": 2324
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/schema/Relation.java",
+      "sha": "1ec8609a1b0957cb5b3d19c3fddf928c8d2c7da0",
+      "size": 1119
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/schema/RelationSchema.java",
+      "sha": "eb3baca5b8d9be939520da2fd160fdd5fe2b0396",
+      "size": 13210
+    },
+    {
+      "path": "codegen/src/main/java/org/hkust/schema/Schema.java",
+      "sha": "8fe8c1e687e67b6998949d3bd8ef5ac85e4e9137",
+      "size": 2853
+    },
+    {
+      "path": "codegen/src/main/resources/pom.xml",
+      "sha": "55800af6d736267c30d7d091ad46378731d84953",
+      "size": 3126
+    },
+    {
+      "path": "codegen/src/test/java/CodeGenTest.java",
+      "sha": "7f7577bbde1eb180060c9da625553af94dc21296",
+      "size": 2729
+    },
+    {
+      "path": "codegen/src/test/java/GenerateCodeTest.java",
+      "sha": "0da31f74cc8019995c85f816bfac4318a5dbe43a",
+      "size": 8766
+    },
+    {
+      "path": "codegen/src/test/java/org/hkust/codegenerator/AggregateProcessFunctionWriterTest.java",
+      "sha": "f649bf5c904435d6c210a8096d2f0b333f3c241f",
+      "size": 4326
+    },
+    {
+      "path": "codegen/src/test/java/org/hkust/codegenerator/MainClassWriterTest.java",
+      "sha": "2b5fdf5a161b472bd77633b63ad69c6f130a8422",
+      "size": 8064
+    },
+    {
+      "path": "codegen/src/test/java/org/hkust/codegenerator/ProcessFunctionWriterTest.java",
+      "sha": "230186aa794028a9138bf38372bf11174eb32495",
+      "size": 4194
+    },
+    {
+      "path": "codegen/src/test/java/org/hkust/codegenerator/RelationProcessFunctionWriterTest.java",
+      "sha": "496083d5d91289b1ae7851fb7c942178ec507dda",
+      "size": 5130
+    },
+    {
+      "path": "codegen/src/test/java/org/hkust/jsonutils/JsonParserTest.java",
+      "sha": "79de3b159fa7e666c970b609729fe1d277eca745",
+      "size": 6141
+    },
+    {
+      "path": "codegen/src/test/java/org/hkust/parser/SQLParserTest.java",
+      "sha": "a7052f7cfaec6cb808a95050e4408298876ec710",
+      "size": 68371
+    },
+    {
+      "path": "codegen/src/test/java/org/hkust/parser/SQLToJSONWriterTest.java",
+      "sha": "b20c8137c6aac49a6586e700804a92dedc209558",
+      "size": 4903
+    },
+    {
+      "path": "codegen/src/test/resources/q10/Job.scala",
+      "sha": "2e08e94962360fc48cb369b098aef6bc32a53ac9",
+      "size": 6385
+    },
+    {
+      "path": "codegen/src/test/resources/q10/Q10AggregateProcessFunction.scala",
+      "sha": "e02e31a35981cb50bd9065e65319c4d85a9a2876",
+      "size": 1206
+    },
+    {
+      "path": "codegen/src/test/resources/q10/Q10CustomerProcessFunction.scala",
+      "sha": "7d0940de72618d4c3035b1994ace9c487a9d36ae",
+      "size": 377
+    },
+    {
+      "path": "codegen/src/test/resources/q10/Q10NationProcessFunction.scala",
+      "sha": "6d1c57c789a59b80279f678f97d403918915c1b5",
+      "size": 363
+    },
+    {
+      "path": "codegen/src/test/resources/q10/Q10OrdersProcessFunction.scala",
+      "sha": "da9f532aeefd5fa19a49a86832a2af2aae5d9f03",
+      "size": 546
+    },
+    {
+      "path": "codegen/src/test/resources/q10/Q10lineitemProcessFunction.scala",
+      "sha": "8698f537e9fe4d85a98d41f0a491aa9a269e19df",
+      "size": 441
+    },
+    {
+      "path": "codegen/src/test/resources/q10/q10.json",
+      "sha": "cf57e9e4c96ace2816bec7f58b73bf8335b25f62",
+      "size": 4434
+    },
+    {
+      "path": "codegen/src/test/resources/q18/Job.scala",
+      "sha": "befd906f404cd83370128c36e76f14525955d0e6",
+      "size": 4947
+    },
+    {
+      "path": "codegen/src/test/resources/q18/Q18.json",
+      "sha": "764311a918c53e80ce004b7723542e75e46e9e5f",
+      "size": 2081
+    },
+    {
+      "path": "codegen/src/test/resources/q18/Q18AggregateProcessFunction.scala",
+      "sha": "f40e460fb9caa1014d0d5fbe9c7c8b245c7e6464",
+      "size": 1263
+    },
+    {
+      "path": "codegen/src/test/resources/q18/Q18CustomerProcessFunction.scala",
+      "sha": "45ba952eb0cfc23a82fd30b8a3f2f426a18969cf",
+      "size": 363
+    },
+    {
+      "path": "codegen/src/test/resources/q18/Q18OrdersProcessFunction.scala",
+      "sha": "288b9b410209e7d26e83a3da470c799393aa6825",
+      "size": 372
+    },
+    {
+      "path": "codegen/src/test/resources/q18/Q18lineitemProcessFunction.scala",
+      "sha": "189b69d441e6626afde92140fd7da2fbecb27a8f",
+      "size": 376
+    },
+    {
+      "path": "codegen/src/test/resources/q3/Job.scala",
+      "sha": "4827a0bec0ce5029361e6589e32aed7ed2cda75f",
+      "size": 5119
+    },
+    {
+      "path": "codegen/src/test/resources/q3/Q3.json",
+      "sha": "b1c990b86e08e8e8732cbe95374e4bdb2d684813",
+      "size": 3398
+    },
+    {
+      "path": "codegen/src/test/resources/q3/Q3AggregateProcessFunction.scala",
+      "sha": "8c651eb4823ccb4898e60bedd15fb3665c6b138d",
+      "size": 1172
+    },
+    {
+      "path": "codegen/src/test/resources/q3/Q3CustomerProcessFunction.scala",
+      "sha": "61e8efafaaf3c29668cb1d27ae871d5588c944bf",
+      "size": 435
+    },
+    {
+      "path": "codegen/src/test/resources/q3/Q3OrdersProcessFunction.scala",
+      "sha": "339e09b4573a87a840bf952263e5675f27e664f0",
+      "size": 466
+    },
+    {
+      "path": "codegen/src/test/resources/q3/Q3lineitemProcessFunction.scala",
+      "sha": "bbb851c5786993ab7d5015a927c6c36e973c7ccf",
+      "size": 469
+    },
+    {
+      "path": "codegen/src/test/resources/q4/Job.scala",
+      "sha": "bcfa4135364a553302bb3d44a2d98b55579f15cb",
+      "size": 4406
+    },
+    {
+      "path": "codegen/src/test/resources/q4/Q4.json",
+      "sha": "373a178d5c632df8f075d28a9c76b08ead6cac65",
+      "size": 2469
+    },
+    {
+      "path": "codegen/src/test/resources/q4/Q4Aggregate1ProcessFunction.scala",
+      "sha": "9bcf0d2eb3ef268816d636c3b46f0967ae12b0ff",
+      "size": 1073
+    },
+    {
+      "path": "codegen/src/test/resources/q4/Q4Aggregate2ProcessFunction.scala",
+      "sha": "2b2c87364c47f375386d4001dc46110f621ab726",
+      "size": 1187
+    },
+    {
+      "path": "codegen/src/test/resources/q4/Q4LineitemProcessFunction.scala",
+      "sha": "6a9b4435f6636d70db3952a2b8377a4b98601e02",
+      "size": 496
+    },
+    {
+      "path": "codegen/src/test/resources/q4/Q4OrdersProcessFunction.scala",
+      "sha": "2fae8ec79d5ebcb2087f60c4fd1bed76c5a60491",
+      "size": 533
+    },
+    {
+      "path": "codegen/src/test/resources/q6/Job.scala",
+      "sha": "ed09a8ebc303a5509c4dae8d338c57650e70541b",
+      "size": 3159
+    },
+    {
+      "path": "codegen/src/test/resources/q6/Q6.json",
+      "sha": "f34e24b9029d433402023ce5e4cae3622b65bad2",
+      "size": 2779
+    },
+    {
+      "path": "codegen/src/test/resources/q6/Q6AggregateProcessFunction.scala",
+      "sha": "d35859cbd5488697925bfb0191e6d0651b98c04a",
+      "size": 1115
+    },
+    {
+      "path": "codegen/src/test/resources/q6/Q6lineitemProcessFunction.scala",
+      "sha": "adafcc0d5e03a27fe201480477a9d862e29a2ca8",
+      "size": 677
+    },
+    {
+      "path": "cquirrel-core-1.0-SNAPSHOT.jar",
+      "sha": "4fa5a0a82522af5e9800a8969419fed2383c6a4c",
+      "size": 157495
+    }
+  ]
+}

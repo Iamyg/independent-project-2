@@ -1,0 +1,21 @@
+
+$ java -version
+openjdk version "1.8.0_452"
+OpenJDK Runtime Environment (build 1.8.0_452-8u452-ga~us1-0ubuntu1~20.04-b09)
+OpenJDK 64-Bit Server VM (build 25.452-b09, mixed mode)
+
+$ mvn -version
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /home/chai_guanpeng/cquirrel-repro/tools/apache-maven-3.6.3
+Java version: 1.8.0_452, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "6.6.87.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+
+$ python --version
+Python 3.8.10
+
+$ /home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/bin/flink --version
+Version: 1.11.2, Commit ID: fe36135
+
+$ uname -a
+Linux LAPTOP-2J9U2FC1 6.6.87.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Apr 21 17:08:54 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux

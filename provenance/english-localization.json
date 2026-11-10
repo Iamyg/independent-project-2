@@ -1,0 +1,12 @@
+{
+  "language": "en-US",
+  "companion_directory": "repro",
+  "evidence_policy": "Copied original measured evidence; no new experiment runs claimed by translation",
+  "translated_upstream_file": "vendor/Cquirrel-release/codegen/src/main/java/org/hkust/parser/Parser.java",
+  "translated_comments": 6,
+  "original_sha256": "0fd017a193688f1e8a186d73d671bdc1e47fa385d39cd008f7067095e911819e",
+  "translated_sha256": "970a5342911c03bab756c4d1306c677da51622f898127de7eecc2266166b2e9c",
+  "non_comment_source_identical": true,
+  "historical_paths": "Original absolute execution paths in logs and REST records are retained as evidence.",
+  "historical_manifests": "Earlier manifests describe the original snapshot; simple-repro-manifest.json describes this localized delivery."
+}

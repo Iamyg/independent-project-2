@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "functional_jobs": 28,
+  "benchmark_jobs": 32,
+  "warmup_jobs": 8,
+  "measured_jobs": 24,
+  "unique_finished_flink_jobs": 60,
+  "passed_comparisons": 60,
+  "benchmark_input_hashes_verified": true,
+  "timing_configurations_recomputed": 8,
+  "benchmark_normalized_answers_rechecked": 32,
+  "report_pages": 7,
+  "report_table_values_checked": 8,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703",
+  "scope": "Q3 functionality plus small single-machine runtime experiment; no cross-system performance claim"
+}

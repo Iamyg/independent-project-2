@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "language": "en-US",
+  "text_files_scanned": 606,
+  "cjk_filename_or_content_violations": [],
+  "identical_experiment_artifacts": 618,
+  "experiment_drivers_identical": true,
+  "parser_non_comment_source_identical": true,
+  "report_pages": 7,
+  "new_experiment_runs_claimed": 0
+}

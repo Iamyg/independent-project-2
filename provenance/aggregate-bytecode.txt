@@ -1,0 +1,513 @@
+Compiled from "AggregateProcessFunction.scala"
+public abstract class org.hkust.BasedProcessFunctions.AggregateProcessFunction<K, AGG> extends org.hkust.BasedProcessFunctions.BasedProcessFunction<K, org.hkust.RelationType.Payload, org.hkust.RelationType.Payload> {
+  public static <K, AGG> boolean $lessinit$greater$default$7();
+    Code:
+       0: getstatic     #49                 // Field org/hkust/BasedProcessFunctions/AggregateProcessFunction$.MODULE$:Lorg/hkust/BasedProcessFunctions/AggregateProcessFunction$;
+       3: invokevirtual #51                 // Method org/hkust/BasedProcessFunctions/AggregateProcessFunction$.$lessinit$greater$default$7:()Z
+       6: ireturn
+
+  public static <K, AGG> boolean $lessinit$greater$default$6();
+    Code:
+       0: getstatic     #49                 // Field org/hkust/BasedProcessFunctions/AggregateProcessFunction$.MODULE$:Lorg/hkust/BasedProcessFunctions/AggregateProcessFunction$;
+       3: invokevirtual #54                 // Method org/hkust/BasedProcessFunctions/AggregateProcessFunction$.$lessinit$greater$default$6:()Z
+       6: ireturn
+
+  public static <K, AGG> java.lang.String $lessinit$greater$default$5();
+    Code:
+       0: getstatic     #49                 // Field org/hkust/BasedProcessFunctions/AggregateProcessFunction$.MODULE$:Lorg/hkust/BasedProcessFunctions/AggregateProcessFunction$;
+       3: invokevirtual #59                 // Method org/hkust/BasedProcessFunctions/AggregateProcessFunction$.$lessinit$greater$default$5:()Ljava/lang/String;
+       6: areturn
+
+  public static <K, AGG> java.lang.String[] $lessinit$greater$default$4();
+    Code:
+       0: getstatic     #49                 // Field org/hkust/BasedProcessFunctions/AggregateProcessFunction$.MODULE$:Lorg/hkust/BasedProcessFunctions/AggregateProcessFunction$;
+       3: invokevirtual #64                 // Method org/hkust/BasedProcessFunctions/AggregateProcessFunction$.$lessinit$greater$default$4:()[Ljava/lang/String;
+       6: areturn
+
+  public java.lang.String prefix();
+    Code:
+       0: aload_0
+       1: getfield      #66                 // Field prefix:Ljava/lang/String;
+       4: areturn
+
+  public abstract AGG init_value();
+
+  public org.apache.flink.api.common.state.ValueState<AGG> alive();
+    Code:
+       0: aload_0
+       1: getfield      #79                 // Field alive:Lorg/apache/flink/api/common/state/ValueState;
+       4: areturn
+
+  public void alive_$eq(org.apache.flink.api.common.state.ValueState<AGG>);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #79                 // Field alive:Lorg/apache/flink/api/common/state/ValueState;
+       5: return
+
+  public abstract AGG addition(AGG, AGG);
+
+  public abstract AGG subtraction(AGG, AGG);
+
+  public abstract AGG aggregate(org.hkust.RelationType.Payload);
+
+  public void open(org.apache.flink.configuration.Configuration);
+    Code:
+       0: aload_0
+       1: invokevirtual #100                // Method initstate:()V
+       4: aload_0
+       5: getfield      #102                // Field testMemory:Z
+       8: ifeq          99
+      11: invokestatic  #108                // Method java/lang/Runtime.getRuntime:()Ljava/lang/Runtime;
+      14: invokevirtual #111                // Method java/lang/Runtime.runFinalization:()V
+      17: invokestatic  #108                // Method java/lang/Runtime.getRuntime:()Ljava/lang/Runtime;
+      20: invokevirtual #114                // Method java/lang/Runtime.gc:()V
+      23: ldc2_w        #115                // long 30000l
+      26: invokestatic  #122                // Method java/lang/Thread.sleep:(J)V
+      29: getstatic     #128                // Field java/lang/System.out:Ljava/io/PrintStream;
+      32: new           #130                // class java/lang/StringBuilder
+      35: dup
+      36: ldc           #131                // int 72
+      38: invokespecial #135                // Method java/lang/StringBuilder."<init>":(I)V
+      41: ldc           #137                // String Aggregate Process Function Memory usage
+      43: invokevirtual #141                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      46: invokestatic  #108                // Method java/lang/Runtime.getRuntime:()Ljava/lang/Runtime;
+      49: invokevirtual #145                // Method java/lang/Runtime.totalMemory:()J
+      52: invokestatic  #108                // Method java/lang/Runtime.getRuntime:()Ljava/lang/Runtime;
+      55: invokevirtual #148                // Method java/lang/Runtime.freeMemory:()J
+      58: lsub
+      59: ldc2_w        #149                // long 1048576l
+      62: ldiv
+      63: invokevirtual #153                // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+      66: ldc           #155                // String , EnumerationTime
+      68: invokevirtual #141                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      71: aload_0
+      72: invokevirtual #158                // Method OutputAccur:()J
+      75: invokevirtual #153                // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+      78: ldc           #160                // String , StorageTime
+      80: invokevirtual #141                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      83: aload_0
+      84: invokevirtual #163                // Method StoreAccur:()J
+      87: invokevirtual #153                // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+      90: invokevirtual #166                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      93: invokevirtual #172                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      96: goto          99
+      99: return
+
+  public void process(org.hkust.RelationType.Payload, org.apache.flink.streaming.api.functions.KeyedProcessFunction<K, org.hkust.RelationType.Payload, org.hkust.RelationType.Payload>.Context, org.apache.flink.util.Collector<org.hkust.RelationType.Payload>);
+    Code:
+       0: aload_0
+       1: invokevirtual #180                // Method alive:()Lorg/apache/flink/api/common/state/ValueState;
+       4: invokeinterface #184,  1          // InterfaceMethod org/apache/flink/api/common/state/ValueState.value:()Ljava/lang/Object;
+       9: ifnonnull     28
+      12: aload_0
+      13: invokevirtual #180                // Method alive:()Lorg/apache/flink/api/common/state/ValueState;
+      16: aload_0
+      17: invokevirtual #186                // Method init_value:()Ljava/lang/Object;
+      20: invokeinterface #190,  2          // InterfaceMethod org/apache/flink/api/common/state/ValueState.update:(Ljava/lang/Object;)V
+      25: goto          28
+      28: aload_1
+      29: invokevirtual #195                // Method org/hkust/RelationType/Payload._1:()Ljava/lang/String;
+      32: astore        5
+      34: ldc           #197                // String Aggregate
+      36: aload         5
+      38: invokevirtual #203                // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+      41: ifeq          491
+      44: aload_1
+      45: invokevirtual #206                // Method org/hkust/RelationType/Payload._2:()Ljava/lang/String;
+      48: ldc           #208                // String Addition
+      50: astore        6
+      52: dup
+      53: ifnonnull     65
+      56: pop
+      57: aload         6
+      59: ifnull        108
+      62: goto          73
+      65: aload         6
+      67: invokevirtual #203                // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+      70: ifne          108
+      73: aload_1
+      74: invokevirtual #206                // Method org/hkust/RelationType/Payload._2:()Ljava/lang/String;
+      77: ldc           #210                // String Remove
+      79: astore        7
+      81: dup
+      82: ifnonnull     94
+      85: pop
+      86: aload         7
+      88: ifnull        108
+      91: goto          102
+      94: aload         7
+      96: invokevirtual #203                // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+      99: ifne          108
+     102: getstatic     #216                // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+     105: goto          486
+     108: aload_0
+     109: aload_1
+     110: invokevirtual #220                // Method isValid:(Lorg/hkust/RelationType/Payload;)Z
+     113: ifeq          483
+     116: aload_0
+     117: aload_1
+     118: invokevirtual #222                // Method aggregate:(Lorg/hkust/RelationType/Payload;)Ljava/lang/Object;
+     121: astore        8
+     123: aload_1
+     124: invokevirtual #206                // Method org/hkust/RelationType/Payload._2:()Ljava/lang/String;
+     127: ldc           #208                // String Addition
+     129: astore        10
+     131: dup
+     132: ifnonnull     144
+     135: pop
+     136: aload         10
+     138: ifnull        152
+     141: goto          170
+     144: aload         10
+     146: invokevirtual #203                // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+     149: ifeq          170
+     152: aload_0
+     153: aload_0
+     154: invokevirtual #180                // Method alive:()Lorg/apache/flink/api/common/state/ValueState;
+     157: invokeinterface #184,  1          // InterfaceMethod org/apache/flink/api/common/state/ValueState.value:()Ljava/lang/Object;
+     162: aload         8
+     164: invokevirtual #224                // Method addition:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     167: goto          227
+     170: aload_1
+     171: invokevirtual #206                // Method org/hkust/RelationType/Payload._2:()Ljava/lang/String;
+     174: ldc           #210                // String Remove
+     176: astore        11
+     178: dup
+     179: ifnonnull     191
+     182: pop
+     183: aload         11
+     185: ifnull        199
+     188: goto          217
+     191: aload         11
+     193: invokevirtual #203                // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+     196: ifeq          217
+     199: aload_0
+     200: aload_0
+     201: invokevirtual #180                // Method alive:()Lorg/apache/flink/api/common/state/ValueState;
+     204: invokeinterface #184,  1          // InterfaceMethod org/apache/flink/api/common/state/ValueState.value:()Ljava/lang/Object;
+     209: aload         8
+     211: invokevirtual #226                // Method subtraction:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     214: goto          227
+     217: new           #228                // class java/lang/Exception
+     220: dup
+     221: ldc           #230                // String Unknown Error
+     223: invokespecial #232                // Method java/lang/Exception."<init>":(Ljava/lang/String;)V
+     226: athrow
+     227: astore        9
+     229: aload_0
+     230: invokevirtual #180                // Method alive:()Lorg/apache/flink/api/common/state/ValueState;
+     233: aload         9
+     235: invokeinterface #190,  2          // InterfaceMethod org/apache/flink/api/common/state/ValueState.update:(Ljava/lang/Object;)V
+     240: aload_0
+     241: getfield      #234                // Field deltaOutput:Z
+     244: ifeq          477
+     247: aload_0
+     248: getfield      #236                // Field aggregateName:Ljava/lang/String;
+     251: ldc           #238                // String _multiple_
+     253: astore        12
+     255: dup
+     256: ifnonnull     268
+     259: pop
+     260: aload         12
+     262: ifnull        337
+     265: goto          276
+     268: aload         12
+     270: invokevirtual #203                // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+     273: ifne          337
+     276: aload_0
+     277: aload_1
+     278: aload         9
+     280: invokevirtual #242                // Method setValue:(Lorg/hkust/RelationType/Payload;Ljava/lang/Object;)[Ljava/lang/Object;
+     283: astore        13
+     285: aload_1
+     286: aload         13
+     288: invokevirtual #246                // Method org/hkust/RelationType/Payload._4_$eq:([Ljava/lang/Object;)V
+     291: aload_1
+     292: new           #22                 // class scala/collection/mutable/ArrayOps$ofRef
+     295: dup
+     296: getstatic     #251                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+     299: aload_0
+     300: getfield      #253                // Field outputKey:[Ljava/lang/String;
+     303: checkcast     #255                // class "[Ljava/lang/Object;"
+     306: invokevirtual #259                // Method scala/Predef$.refArrayOps:([Ljava/lang/Object;)[Ljava/lang/Object;
+     309: invokespecial #261                // Method scala/collection/mutable/ArrayOps$ofRef."<init>":([Ljava/lang/Object;)V
+     312: aload_0
+     313: getfield      #236                // Field aggregateName:Ljava/lang/String;
+     316: getstatic     #266                // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+     319: ldc_w         #268                // class java/lang/String
+     322: invokevirtual #272                // Method scala/reflect/ClassTag$.apply:(Ljava/lang/Class;)Lscala/reflect/ClassTag;
+     325: invokevirtual #276                // Method scala/collection/mutable/ArrayOps$ofRef.$colon$plus:(Ljava/lang/Object;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+     328: checkcast     #277                // class "[Ljava/lang/String;"
+     331: invokevirtual #281                // Method org/hkust/RelationType/Payload._5_$eq:([Ljava/lang/String;)V
+     334: goto          428
+     337: aload_0
+     338: aload         9
+     340: invokevirtual #285                // Method getAggregate:(Ljava/lang/Object;)Lscala/Tuple2;
+     343: astore        14
+     345: aload_1
+     346: aload_0
+     347: aload_1
+     348: aload         14
+     350: invokevirtual #289                // Method scala/Tuple2._1:()Ljava/lang/Object;
+     353: checkcast     #255                // class "[Ljava/lang/Object;"
+     356: invokespecial #293                // Method setMultipleValue:(Lorg/hkust/RelationType/Payload;[Ljava/lang/Object;)[Ljava/lang/Object;
+     359: invokevirtual #246                // Method org/hkust/RelationType/Payload._4_$eq:([Ljava/lang/Object;)V
+     362: aload_1
+     363: new           #22                 // class scala/collection/mutable/ArrayOps$ofRef
+     366: dup
+     367: getstatic     #251                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+     370: aload_0
+     371: getfield      #253                // Field outputKey:[Ljava/lang/String;
+     374: checkcast     #255                // class "[Ljava/lang/Object;"
+     377: invokevirtual #259                // Method scala/Predef$.refArrayOps:([Ljava/lang/Object;)[Ljava/lang/Object;
+     380: invokespecial #261                // Method scala/collection/mutable/ArrayOps$ofRef."<init>":([Ljava/lang/Object;)V
+     383: new           #22                 // class scala/collection/mutable/ArrayOps$ofRef
+     386: dup
+     387: getstatic     #251                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+     390: aload         14
+     392: invokevirtual #295                // Method scala/Tuple2._2:()Ljava/lang/Object;
+     395: checkcast     #255                // class "[Ljava/lang/Object;"
+     398: invokevirtual #259                // Method scala/Predef$.refArrayOps:([Ljava/lang/Object;)[Ljava/lang/Object;
+     401: invokespecial #261                // Method scala/collection/mutable/ArrayOps$ofRef."<init>":([Ljava/lang/Object;)V
+     404: getstatic     #300                // Field scala/Array$.MODULE$:Lscala/Array$;
+     407: getstatic     #266                // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+     410: ldc_w         #268                // class java/lang/String
+     413: invokevirtual #272                // Method scala/reflect/ClassTag$.apply:(Ljava/lang/Class;)Lscala/reflect/ClassTag;
+     416: invokevirtual #304                // Method scala/Array$.canBuildFrom:(Lscala/reflect/ClassTag;)Lscala/collection/generic/CanBuildFrom;
+     419: invokevirtual #308                // Method scala/collection/mutable/ArrayOps$ofRef.$plus$plus:(Lscala/collection/GenTraversableOnce;Lscala/collection/generic/CanBuildFrom;)Ljava/lang/Object;
+     422: checkcast     #277                // class "[Ljava/lang/String;"
+     425: invokevirtual #281                // Method org/hkust/RelationType/Payload._5_$eq:([Ljava/lang/String;)V
+     428: aload_1
+     429: ldc_w         #310                // String Output
+     432: invokevirtual #313                // Method org/hkust/RelationType/Payload._1_$eq:(Ljava/lang/String;)V
+     435: aload_1
+     436: ldc_w         #310                // String Output
+     439: invokevirtual #316                // Method org/hkust/RelationType/Payload._2_$eq:(Ljava/lang/String;)V
+     442: aload_1
+     443: aload_0
+     444: getfield      #318                // Field nextKey:[Ljava/lang/String;
+     447: invokevirtual #321                // Method org/hkust/RelationType/Payload.setKey:([Ljava/lang/String;)V
+     450: aload_0
+     451: aload_1
+     452: invokevirtual #324                // Method isOutputValid:(Lorg/hkust/RelationType/Payload;)Z
+     455: ifeq          471
+     458: aload_3
+     459: aload_1
+     460: invokeinterface #329,  2          // InterfaceMethod org/apache/flink/util/Collector.collect:(Ljava/lang/Object;)V
+     465: getstatic     #216                // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+     468: goto          474
+     471: getstatic     #216                // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+     474: goto          480
+     477: getstatic     #216                // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+     480: goto          486
+     483: getstatic     #216                // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+     486: astore        4
+     488: goto          502
+     491: goto          494
+     494: getstatic     #216                // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+     497: astore        4
+     499: goto          502
+     502: return
+
+  public boolean isValid(org.hkust.RelationType.Payload);
+    Code:
+       0: iconst_1
+       1: ireturn
+
+  public boolean isOutputValid(org.hkust.RelationType.Payload);
+    Code:
+       0: iconst_1
+       1: ireturn
+
+  public scala.Tuple2<java.lang.Object[], java.lang.String[]> getAggregate(AGG);
+    Code:
+       0: new           #287                // class scala/Tuple2
+       3: dup
+       4: getstatic     #300                // Field scala/Array$.MODULE$:Lscala/Array$;
+       7: getstatic     #344                // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+      10: getstatic     #266                // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+      13: invokevirtual #348                // Method scala/reflect/ClassTag$.Any:()Lscala/reflect/ClassTag;
+      16: invokevirtual #351                // Method scala/Array$.apply:(Lscala/collection/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+      19: getstatic     #300                // Field scala/Array$.MODULE$:Lscala/Array$;
+      22: getstatic     #344                // Field scala/collection/immutable/Nil$.MODULE$:Lscala/collection/immutable/Nil$;
+      25: getstatic     #266                // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+      28: ldc_w         #268                // class java/lang/String
+      31: invokevirtual #272                // Method scala/reflect/ClassTag$.apply:(Ljava/lang/Class;)Lscala/reflect/ClassTag;
+      34: invokevirtual #351                // Method scala/Array$.apply:(Lscala/collection/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+      37: invokespecial #354                // Method scala/Tuple2."<init>":(Ljava/lang/Object;Ljava/lang/Object;)V
+      40: areturn
+
+  public java.lang.Object[] setValue(org.hkust.RelationType.Payload, java.lang.Object);
+    Code:
+       0: aload_0
+       1: invokespecial #357                // Method tempArray:()Lscala/collection/mutable/ArrayBuffer;
+       4: invokevirtual #362                // Method scala/collection/mutable/ArrayBuffer.nonEmpty:()Z
+       7: ifeq          13
+      10: goto          0
+      13: new           #22                 // class scala/collection/mutable/ArrayOps$ofRef
+      16: dup
+      17: getstatic     #251                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+      20: aload_0
+      21: getfield      #253                // Field outputKey:[Ljava/lang/String;
+      24: checkcast     #255                // class "[Ljava/lang/Object;"
+      27: invokevirtual #259                // Method scala/Predef$.refArrayOps:([Ljava/lang/Object;)[Ljava/lang/Object;
+      30: invokespecial #261                // Method scala/collection/mutable/ArrayOps$ofRef."<init>":([Ljava/lang/Object;)V
+      33: aload_0
+      34: aload_1
+      35: invokedynamic #385,  0            // InvokeDynamic #0:apply:(Lorg/hkust/BasedProcessFunctions/AggregateProcessFunction;Lorg/hkust/RelationType/Payload;)Lscala/Function1;
+      40: invokevirtual #389                // Method scala/collection/mutable/ArrayOps$ofRef.foreach:(Lscala/Function1;)V
+      43: aload_0
+      44: invokespecial #357                // Method tempArray:()Lscala/collection/mutable/ArrayBuffer;
+      47: getstatic     #251                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+      50: iconst_1
+      51: anewarray     #199                // class java/lang/Object
+      54: dup
+      55: iconst_0
+      56: aload_2
+      57: aastore
+      58: invokevirtual #393                // Method scala/Predef$.genericWrapArray:(Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+      61: invokevirtual #396                // Method scala/collection/mutable/ArrayBuffer.append:(Lscala/collection/Seq;)V
+      64: aload_0
+      65: invokespecial #357                // Method tempArray:()Lscala/collection/mutable/ArrayBuffer;
+      68: getstatic     #266                // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+      71: invokevirtual #348                // Method scala/reflect/ClassTag$.Any:()Lscala/reflect/ClassTag;
+      74: invokevirtual #400                // Method scala/collection/mutable/ArrayBuffer.toArray:(Lscala/reflect/ClassTag;)Ljava/lang/Object;
+      77: checkcast     #255                // class "[Ljava/lang/Object;"
+      80: astore_3
+      81: aload_0
+      82: invokespecial #357                // Method tempArray:()Lscala/collection/mutable/ArrayBuffer;
+      85: invokevirtual #403                // Method scala/collection/mutable/ArrayBuffer.clear:()V
+      88: aload_3
+      89: areturn
+
+  public void expire(org.apache.flink.streaming.api.functions.KeyedProcessFunction<K, org.hkust.RelationType.Payload, org.hkust.RelationType.Payload>.Context);
+    Code:
+       0: return
+
+  public void storeStream(org.hkust.RelationType.Payload, org.apache.flink.streaming.api.functions.KeyedProcessFunction<K, org.hkust.RelationType.Payload, org.hkust.RelationType.Payload>.Context);
+    Code:
+       0: return
+
+  public boolean testExists(org.hkust.RelationType.Payload, org.apache.flink.streaming.api.functions.KeyedProcessFunction<K, org.hkust.RelationType.Payload, org.hkust.RelationType.Payload>.Context);
+    Code:
+       0: iconst_0
+       1: ireturn
+
+  public void enumeration(org.apache.flink.util.Collector<org.hkust.RelationType.Payload>);
+    Code:
+       0: return
+
+  public boolean testExists(java.lang.Object, org.apache.flink.streaming.api.functions.KeyedProcessFunction$Context);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #192                // class org/hkust/RelationType/Payload
+       5: aload_2
+       6: invokevirtual #432                // Method testExists:(Lorg/hkust/RelationType/Payload;Lorg/apache/flink/streaming/api/functions/KeyedProcessFunction$Context;)Z
+       9: ireturn
+
+  public void storeStream(java.lang.Object, org.apache.flink.streaming.api.functions.KeyedProcessFunction$Context);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #192                // class org/hkust/RelationType/Payload
+       5: aload_2
+       6: invokevirtual #435                // Method storeStream:(Lorg/hkust/RelationType/Payload;Lorg/apache/flink/streaming/api/functions/KeyedProcessFunction$Context;)V
+       9: return
+
+  public void process(java.lang.Object, org.apache.flink.streaming.api.functions.KeyedProcessFunction$Context, org.apache.flink.util.Collector);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #192                // class org/hkust/RelationType/Payload
+       5: aload_2
+       6: aload_3
+       7: invokevirtual #438                // Method process:(Lorg/hkust/RelationType/Payload;Lorg/apache/flink/streaming/api/functions/KeyedProcessFunction$Context;Lorg/apache/flink/util/Collector;)V
+      10: return
+
+  public static final void $anonfun$setValue$1(org.hkust.BasedProcessFunctions.AggregateProcessFunction, org.hkust.RelationType.Payload, java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #357                // Method tempArray:()Lscala/collection/mutable/ArrayBuffer;
+       4: getstatic     #251                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+       7: iconst_1
+       8: anewarray     #199                // class java/lang/Object
+      11: dup
+      12: iconst_0
+      13: aload_1
+      14: aload_2
+      15: invokevirtual #445                // Method org/hkust/RelationType/Payload.apply:(Ljava/lang/String;)Ljava/lang/Object;
+      18: aastore
+      19: invokevirtual #393                // Method scala/Predef$.genericWrapArray:(Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+      22: invokevirtual #396                // Method scala/collection/mutable/ArrayBuffer.append:(Lscala/collection/Seq;)V
+      25: return
+
+  public static final void $anonfun$setMultipleValue$1(org.hkust.BasedProcessFunctions.AggregateProcessFunction, org.hkust.RelationType.Payload, java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #357                // Method tempArray:()Lscala/collection/mutable/ArrayBuffer;
+       4: getstatic     #251                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+       7: iconst_1
+       8: anewarray     #199                // class java/lang/Object
+      11: dup
+      12: iconst_0
+      13: aload_1
+      14: aload_2
+      15: invokevirtual #445                // Method org/hkust/RelationType/Payload.apply:(Ljava/lang/String;)Ljava/lang/Object;
+      18: aastore
+      19: invokevirtual #393                // Method scala/Predef$.genericWrapArray:(Ljava/lang/Object;)Lscala/collection/mutable/WrappedArray;
+      22: invokevirtual #396                // Method scala/collection/mutable/ArrayBuffer.append:(Lscala/collection/Seq;)V
+      25: return
+
+  public org.hkust.BasedProcessFunctions.AggregateProcessFunction(java.lang.String, java.lang.String[], java.lang.String[], java.lang.String[], java.lang.String, boolean, boolean);
+    Code:
+       0: aload_0
+       1: aload_3
+       2: putfield      #253                // Field outputKey:[Ljava/lang/String;
+       5: aload_0
+       6: aload         4
+       8: putfield      #318                // Field nextKey:[Ljava/lang/String;
+      11: aload_0
+      12: aload         5
+      14: putfield      #236                // Field aggregateName:Ljava/lang/String;
+      17: aload_0
+      18: iload         6
+      20: putfield      #234                // Field deltaOutput:Z
+      23: aload_0
+      24: iload         7
+      26: putfield      #102                // Field testMemory:Z
+      29: aload_0
+      30: lconst_0
+      31: lconst_0
+      32: aload_1
+      33: iload         7
+      35: invokespecial #453                // Method org/hkust/BasedProcessFunctions/BasedProcessFunction."<init>":(JJLjava/lang/String;Z)V
+      38: aload_0
+      39: ldc_w         #455                // String Aggregation Process Function
+      42: putfield      #66                 // Field prefix:Ljava/lang/String;
+      45: aload_0
+      46: new           #359                // class scala/collection/mutable/ArrayBuffer
+      49: dup
+      50: invokespecial #457                // Method scala/collection/mutable/ArrayBuffer."<init>":()V
+      53: putfield      #75                 // Field tempArray:Lscala/collection/mutable/ArrayBuffer;
+      56: return
+
+  public static final java.lang.Object $anonfun$setValue$1$adapted(org.hkust.BasedProcessFunctions.AggregateProcessFunction, org.hkust.RelationType.Payload, java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: invokestatic  #459                // Method $anonfun$setValue$1:(Lorg/hkust/BasedProcessFunctions/AggregateProcessFunction;Lorg/hkust/RelationType/Payload;Ljava/lang/String;)V
+       6: getstatic     #216                // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+       9: areturn
+
+  public static final java.lang.Object $anonfun$setMultipleValue$1$adapted(org.hkust.BasedProcessFunctions.AggregateProcessFunction, org.hkust.RelationType.Payload, java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: invokestatic  #461                // Method $anonfun$setMultipleValue$1:(Lorg/hkust/BasedProcessFunctions/AggregateProcessFunction;Lorg/hkust/RelationType/Payload;Ljava/lang/String;)V
+       6: getstatic     #216                // Field scala/runtime/BoxedUnit.UNIT:Lscala/runtime/BoxedUnit;
+       9: areturn
+}

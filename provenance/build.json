@@ -1,0 +1,13 @@
+{
+  "query_sha256": "bbdb3bf75eff419b41940a31aadc328892a899a9456b967bd3d634fa3e0fe483",
+  "jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703",
+  "core_sha256": "de5341f3aeb954148928ac88ff28e27c9fd51619c3ba5e44f581bbfec3264c3b",
+  "codegen_sha256": "e283cf31b620ee5b9159d576538825d929ccd4cc5dc68b512f5e2b95cdc4946b",
+  "generated_files": [
+    "generated/generated-code/src/main/scala/org/hkust/Job.scala",
+    "generated/generated-code/src/main/scala/org/hkust/QAggregate0ProcessFunction.scala",
+    "generated/generated-code/src/main/scala/org/hkust/QcustomerProcessFunction.scala",
+    "generated/generated-code/src/main/scala/org/hkust/QlineitemProcessFunction.scala",
+    "generated/generated-code/src/main/scala/org/hkust/QordersProcessFunction.scala"
+  ]
+}
