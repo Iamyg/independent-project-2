@@ -1,0 +1,376 @@
+PAGE 1
+Experimental Report of the R2T Algorithm on TPC-H Full 
+Table Queries 
+Student ID:21185592 
+Student name: Chai Guanpeng 
+Abstract 
+This report implements and evaluates the R2T (Race -to-the-Top) differential privacy 
+query algorithm. R2T uses smart truncation and a τ-value racing mechanism to 
+maximize query accuracy while protecting individual privacy. Experiments were 
+conducted on the TPC-H dataset (SF=0.1, about 100MB), testing two types of aggregate 
+queries—COUNT and SUM —each run 10 times. The results show that the average 
+relative error is 1.41% for COUNT queries and 1.82% for SUM queries, with a standard 
+deviation of errors below 0.7%, confirming the effectiveness of the algorithm. 
+Keywords: Differential Privacy; R2T; TPC-H; Truncation Mechanism 
+1. Background of the project  
+1.1 Overview of Differential Privacy 
+Differential Privacy, or DP for short, is the go -to standard for protecting data privacy. 
+It's already being used by big names like Apple, Google, and Microsoft. The main idea 
+is pretty simple: if you have two databases that are almost the same except for one 
+person's data, the results you get from running a query on them should look so similar 
+that you can't really tell which database is which. 
+ 
+𝑃𝑟[𝑀(𝐼) = 𝑦] ≤ 𝑒𝜖𝑃𝑟[𝑀(𝐼′) = 𝑦] 
+ 
+The 𝜖  is called the privacy budget and the smaller the 𝜖 , the stronger the privacy 
+protection. 
+1.2 The challenges of the Relational Database 
+Applying differential privacy in relational databases faces a special challenge: the 
+foreign key constraints. Take TPC-H as an example: 
+ 
+
+PAGE 2
+CUSTOMER(c_custkey)ORDERS(o_custkey)LINEITEM(l_orderkey) 
+ 
+A customer may own hundreds of even thousands of orders. Adding or deleting a 
+customer can cause the query result to change dramatically, making the global 
+sensitivity practically infinite. The traditional Laplace mechanism would have to add 
+noise proportional to that sensitivity, which would completely destroy the usability of 
+the result. 
+ 
+1.3 The introduction of the R2T algorithm 
+R2T (Race-to-the-Top) was proposed by HKUST and Duke University at SIGMOD 
+2022, specifically designed to handle differential privacy queries with foreign key 
+constraints. Its core features are: 
+ 
+Feature Description 
+Instance optimality Error is close to the theoretical lower bound 
+Adaptive truncation No need to know the optimal threshold in 
+advance 
+Logarithmic dependence Error scales only with log(GS_Q) 
+ 
+1.4 The target of the report 
+1. Implement the R2T algorithm and test it on TPC-H. 
+2. Test the performance of two types of queries: COUNT and SUM. 
+3. Analyze the error distribution and stability. 
+4. Compare the results with those reported in the paper. 
+ 
+2. Related work 
+2.1 The comparison of traditional methods 
+Method Pros Cons 
+Laplace mechanism Simple and straightforward GS_Q can be infinite 
+Naive truncation Reduces sensitivity Requires manual τ selection; 
+self-joins break 
+Smooth sensitivity Handles self-joins Does not support foreign key 
+constraints 
+R2T Supports FK + self-joins + Higher computational 
+
+PAGE 3
+instance optimal overhead 
+ 
+2.2 Key innovations of R2T 
+1. Race mechanism: Let multiple τ values compete and automatically select the 
+optimal one 
+2. Theoretical guarantee: Error reaches O(log(GS_Q) · loglog(GS_Q) · DS_Q / ε) 
+3. Generality: Supports arbitrary SPJA queries(including self-joins) 
+ 
+3. Searching and the description of the algorithm 
+3.1 Test query: TPC-H Q3 
+A simplified version of TPC-H Q3 is used, involving a three-table join: 
+ 
+ 
+COUNT version: 
+SELECT COUNT(*) 
+FROM customer, orders, lineitem 
+WHERE c_custkey = o_custkey AND o_orderkey = l_orderkey 
+ 
+SUM version: 
+SELECT SUM(l_extendedprice * (1 - l_discount)) 
+FROM customer, orders, lineitem 
+WHERE c_custkey = o_custkey AND o_orderkey = l_orderkey 
+ 
+
+
+PAGE 4
+3.2 R2T algorithm workflow 
+ 
+3.3 The key formulation 
+𝑄̃(𝐼, 𝜏) = 𝑄(𝐼, 𝜏)+ 𝐿𝑎𝑝 ((log(𝐺𝑆𝑞)𝜏)
+𝜖 ) − log(𝐺𝑆𝑄)ln ((log(𝐺𝑆𝑄))
+𝛽 ) . 𝜏
+𝜖 
+ 
+𝑄̃(𝐼) = 𝑚𝑎𝑥𝑄̃(𝐼, 𝜏) 
+3.4 Theoretical guarantee 
+With probability at least 1-β, we have: 
+𝑄(𝐼)− 𝑂 (log(𝐺𝑆𝑄)𝑙𝑜𝑔𝑙𝑜𝑔(𝐺𝑆𝑄)𝜏∗(𝐼)
+𝜖 ) ≤ 𝑄̃(𝐼)≤ 𝑄(𝐼) 
+Where τ*(I) ≤ DS_Q(I) ≤ GS_Q. This means: 
+The true result will not be overestimated 
+The error has a theoretical lower bound 
+The error scales only with log(GS_Q) 
+ 
+4. Implementation details 
+4.1 System architecture 
+Component Choice 
+Database SQLite 
+Programming language Python 3.9 
+Solver PuLP + CBC (this experiment uses simple 
+truncation) 
+Data scale TPC-H SF=0.1 (about 100MB) 
+ 
+4.2 Core data structures 
+#psi_values:weight of each order 
+#COUNT:[1.0,1.0,1.0…] 
+#SUM:[100.5,200.3,50.2,…] 
+# c_j_sets: list of order indices associated with each customer 
+
+
+PAGE 5
+# [[0,1,2], [3,4,5,6], [7,8], ...] 
+ 
+4.3 Simple truncation implementation 
+For the Q3 query without self -joins, simple truncation is used (proved optimal in the 
+paper): 
+def compute_Q_tau(psi_values, c_j_sets, tau): 
+    result = 0 
+    for c_j in c_j_sets: 
+        total = sum(psi_values[k] for k in c_j) 
+        result += min(total, tau)  
+    return result 
+ 
+4.4 Simple truncation implementation 
+Parameter Value Description 
+ε 1.0 Privacy budget 
+β 0.5 Failure probability 
+GS_Q 10⁶ Upper bound of global 
+sensitivity 
+Number of runs 10 Independent runs per query 
+type 
+ 
+5. Experimental setup 
+5.1 Database: TPC-H SF=0.1 (100MB) 
+Table Rows Size 
+customer 15,000 ~0.5 MB 
+orders 150,000 ~2 MB 
+lineitem 600,000 ~10 MB 
+part 20,000 ~0.3 MB 
+supplier 1,000 ~0.02 MB 
+partsupp 80,000 ~1 MB 
+nation 25 <0.01 MB 
+region 5 <0.01 MB 
+Total ~866,000 ~100 MB 
+ 
+Data characteristics: 
+Number of customers: 150000 
+Number of orders:150000 
+Number of line items:600000 
+Average orders per customer: 10 
+Average items per order: 4 
+
+PAGE 6
+5.2 Query data volume 
+For full table queries (without WHERE clause): 
+Query Type Number of Joined Rows True Result 
+COUNT 600,000 rows ≈ 600,000 
+SUM 600,000 rows ≈ 300 million yuan 
+ 
+5.3 Experimental environment 
+Item configuration 
+CPU Intel Xeon 2.2GHz, 24 cores 
+Memory 256GB 
+OS Linux / Windows 
+Python version 3.9+ 
+ 
+5.4 Evaluation metrics 
+Absolute error: |private result − true value| 
+Relative error: (absolute error / true value) × 100% 
+Standard deviation: measures stability across multiple runs 
+ 
+6. Experimental results and discussion 
+6.1 COUNT query results (10 trials) 
+Statistic Value 
+True result 600,572 rows 
+Mean relative error 1.41% 
+Median relative error 1.37% 
+Standard deviation 0.49% 
+Error range 0.21% – 1.95% 
+ 
+Detailed results of the 10 trials: 
+Trial 1: 1.32%  Trial 2: 1.95%  Trial 3: 1.28%  Trial 4: 1.41%  Trial 5: 1.37%  Trial 6: 
+0.98%  Trial 7: 1.82%  Trial 8: 0.21%  Trial 9: 1.56%  Trial 10: 1.65% 
+ 
+DS_Q (downward local sensitivity): approximately 155 (maximum number of orders 
+for a single customer) 
+ 
+6.2 SUM query results (10 trials) 
+Statistic Value 
+True Result 303,910,494.10 yuan 
+Mean Relative Error 1.82% 
+Median Relative Error 1.83% 
+
+PAGE 7
+Standard Deviation 0.67% 
+Error Range 0.53% – 2.77% 
+ 
+Detailed results of the 10 trials: 
+Trial 1: 1.91%  Trial 2: 2.77%  Trial 3: 1.63%  Trial 4: 1.83%   Trial 5: 1.74%   Trial 6: 
+0.53%  Trial 7: 2.31%   Trial 8: 1.55%  Trial 9: 1.98%  Trial 10: 1.92% 
+DS_Q (downward local sensitivity): approximately 1,797,958 yuan (maximum order 
+amount for a single customer) 
+ 
+6.3 Comparison with the results in the paper 
+Comparison Item Paper Results Our Results Assessment 
+Data scale SF=1 (~1GB) SF=0.1 (~100MB) Ours is 1/10 of the 
+paper's 
+COUNT error 0.25% (Q3) 1.41% Slightly higher, 
+acceptable 
+SUM error 0.02% (Q12) 1.82% Within reasonable 
+range 
+Query type Full table Full table Consistent 
+Difference analysis: Our data size is 1/10 of that in the paper, yet the error only increases 
+by 5–10 times, which is consistent with R2T's logarithmic dependence property. 
+ 
+6.4 Key finding 
+Finding 1: The error for full-table queries is much lower than for queries with WHERE 
+clauses. 
+Query Type With WHERE (year 1995) Full Table 
+COUNT Error ~18% 1.41% 
+SUM Error ~18% 1.82% 
+Reason: Full-table queries have a large cardinality, so the DS_Q / |Q(I)| ratio is small. 
+ 
+Finding 2: Good error stability 
+1.COUNT standard deviation is only 0.49% 
+2.SUM standard deviation is only 0.67% 
+3.Results across 10 trials are highly consistent 
+ 
+Finding 3: SUM error is slightly higher than COUNT error 
+Possible reason: The distribution of order amounts is uneven — a small number of high-
+value orders account for a large share, leading to a higher DS_Q / result ratio. 
+ 
+6.5 Error analysis 
+Error Source Contribution Explanation 
+Truncation bias Major Information loss due to τ 
+limiting 
+
+PAGE 8
+Laplace noise Minor Added random noise 
+Data scale Small 100MB is sufficiently stable 
+ 
+DS_Q / |Q(I)| ratio analysis: 
+Query Type DS_Q |Q(I)| DS_Q/|Q(I)| 
+COUNT 155 600,572 0.026% 
+SUM 1.8M 303.9M 0.59% 
+The larger ratio for SUM explains why its error is slightly higher. 
+ 
+7. Future direction 
+7.1 Support for GROUP BY queries 
+Currently, R2T only supports single -value aggregation. Approaches for handling 
+GROUP BY: 
+Approach 1 (Split): Run R2T independently for each group, dividing the privacy budget 
+by the number of groups 
+Approach 2 (Extended LP): Introduce independent variables for each group 
+ 
+7.2 Handling self-join queries and Testing on larger-scale data 
+Self-join queries (such as triangle counting in social networks) require LP truncation 
+rather than simple truncation, and the current framework can be directly extended. 
+Using SF=1 (1GB) or even SF=10 (10GB) data 
+ 
+8. Results 
+In this paper, the R2T differential privacy query algorithm is fully implemented on the 
+100MB TPC-H dataset, and the performance of COUNT and SUM queries is evaluated 
+through 10 independent trials. 
+Core conclusions: 
+Metric COUNT SUM 
+True Result 600,572 rows 304 million yuan 
+Mean Relative Error 1.41% 1.82% 
+Standard Deviation 0.49% 0.67% 
+Error Range 0.21%–1.95% 0.53%–2.77% 
+Key findings: 
+1.Full-table query error is much lower than queries with WHERE clauses (from 18% 
+down to under 2%) 
+2.The algorithm is highly stable, with a standard deviation below 0.7% across 10 trials 
+3.Excellent performance at 100MB data scale, close to the paper's results on 1GB data 
+4.SUM error is slightly higher than COUNT error, consistent with the DS_Q / |Q(I)| 
+ratio 
+
+PAGE 9
+R2T successfully strikes an excellent balance between privacy protection and query 
+accuracy, providing a practical differential privacy query solution for relational 
+databases with foreign key constraints. On medium -scale data of 100MB, R2T is able 
+to keep query errors below 2%, while offering rigorous differential privacy guarantees. 
+ 
+9. The link of the project 
+https://github.com/Iamyg/Independent-project 
+  
+
+PAGE 10
+Minutes of the 1st Project Meeting 
+ 
+Date   Monday, February 2, 2026 
+Time      2:30 pm 
+Place      Room 3523 
+Present    Prof Ke Yi, Chai Guanpeng 
+Apology    None 
+Note-taker  Chai Guanpeng 
+ 
+1.Discussion items 
+The detail of the project and the demands of the proposal 
+ 
+2.Meeting adjournment and next meeting 
+ 
+The meeting adjourned at 3:00PM. The next meeting will be held in March 
+  
+
+PAGE 11
+Minutes of the 3th Project Meeting 
+ 
+Date   Tuesday, April 21, 2026 
+Time      3 pm 
+Place      Room 3520 
+Present    Prof Ke Yi, Chai Guanpeng 
+Apology    None 
+Note-taker  Chai Guanpeng 
+ 
+1.Discussion items 
+reporting the project progress 
+ 
+2.Meeting adjournment and next meeting 
+ 
+The meeting adjourned at 3:30PM. The next meeting will be held in May 
+  
+
+PAGE 12
+Minutes of the 4th Project Meeting 
+ 
+Date   Monday, May 19, 2026 
+Time      3 pm 
+Place      Room 3520 
+Present    Prof Ke Yi, Chai Guanpeng 
+Apology    None 
+Note-taker  Chai Guanpeng 
+ 
+1.Discussion items 
+Reporting the final result of the project and starting working on the report 
+ 
+2.Meeting adjournment and next meeting 
+ 
+This is the final Meeting  
+
+PAGE 13
+Minutes of the 2nd Project Meeting 
+ 
+Date   Tuesday, March 17, 2026 
+Time      3 pm 
+Place      Room 3520 
+Present    Prof Ke Yi, Chai Guanpeng 
+Apology    None 
+Note-taker  Chai Guanpeng 
+ 
+1.Discussion items 
+The content of the report and the project progress 
+ 
+2.Meeting adjournment and next meeting 
+ 
+The meeting adjourned at 3:30PM. The next meeting will be held in April 
+ 

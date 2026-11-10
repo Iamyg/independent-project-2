@@ -1,0 +1,15 @@
+{
+  "benchmark_batch": "results/benchmark/20261023T083453979792Z",
+  "benchmark_runs": 32,
+  "functional_jobs": 28,
+  "expected_pages": 7,
+  "language": "en-US",
+  "revision": "Expanded algorithm: live states, keyed indexes, insert/delete propagation, aggregation and cost boundaries",
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703",
+  "reference_layout": "A4, centered title and student metadata, abstract, numbered academic sections, tables and references",
+  "figures": [
+    "figures/runtime.png"
+  ],
+  "authoring": "python-docx; Word PDF export; Poppler raster verification",
+  "title": "Cquirrel: Continuous Query Processing over Acyclic Relational Schemas"
+}
