@@ -1,0 +1,33 @@
+{
+  "name": "delete_customer",
+  "category": "tpch",
+  "status": "passed",
+  "job_id": "c8d60719963e4b1fc5e0d576e786767a",
+  "input_sha256": "d6b36b6579260740370dfe39fdc477696f9642efc588586225829d3ca27fc741",
+  "input_events": 7656,
+  "insert": 7655,
+  "delete": 1,
+  "expected_groups": 9,
+  "actual_groups": 9,
+  "output_records": 45,
+  "empty_group_sentinels": [
+    [
+      1092,
+      "1995-03-04",
+      0,
+      "-3.865352482534945E-12"
+    ],
+    [
+      4960,
+      "1995-02-26",
+      0,
+      "-2.1827872842550278E-11"
+    ]
+  ],
+  "differences": [],
+  "max_absolute_error": "1E-11",
+  "parallelism": 1,
+  "client_wall_seconds": 2.3048902139998972,
+  "flink_duration_ms": 198,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703"
+}

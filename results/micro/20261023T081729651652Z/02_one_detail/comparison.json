@@ -1,0 +1,20 @@
+{
+  "name": "02_one_detail",
+  "category": "micro",
+  "status": "passed",
+  "job_id": "dc526632aa762c1ebd1e1d2703e4bc1d",
+  "input_sha256": "d9e5de8215f8ddfc216dd7a1e3bd0bd66088ab900bf07f71e17f00d7d915844c",
+  "input_events": 3,
+  "insert": 3,
+  "delete": 0,
+  "expected_groups": 1,
+  "actual_groups": 1,
+  "output_records": 1,
+  "empty_group_sentinels": [],
+  "differences": [],
+  "max_absolute_error": "0.0000",
+  "parallelism": 1,
+  "client_wall_seconds": 2.46152994699969,
+  "flink_duration_ms": 155,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703"
+}

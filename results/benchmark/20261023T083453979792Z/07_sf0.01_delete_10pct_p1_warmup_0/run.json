@@ -1,0 +1,21 @@
+{
+  "scale_factor": 0.01,
+  "scenario": "delete_10pct",
+  "input": "data/benchmark/sf0.01/delete_10pct/events.txt",
+  "input_events": 82693,
+  "insertions": 76675,
+  "deletions": 6018,
+  "input_sha256": "43158de398cdb48eb5072667f17d57260ece724669c15e63ea296163a443e82f",
+  "expected_groups": 101,
+  "parallelism": 1,
+  "warmup": true,
+  "repeat": 0,
+  "job_id": "26be465e4434d2268299e18d0b430011",
+  "flink_duration_ms": 567,
+  "client_wall_seconds": 2.6396703110003727,
+  "output_records": 337,
+  "effective_max_parallelism": 1,
+  "status": "passed",
+  "directory": "results/benchmark/20261023T083453979792Z/07_sf0.01_delete_10pct_p1_warmup_0",
+  "events_per_job_second": 145843.03350970018
+}

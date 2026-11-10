@@ -1,0 +1,21 @@
+{
+  "scale_factor": 0.001,
+  "scenario": "insert",
+  "input": "data/benchmark/sf0.001/insert/events.txt",
+  "input_events": 7655,
+  "insertions": 7655,
+  "deletions": 0,
+  "input_sha256": "227b13bb619fce8b0aa9e910f8b3a3a9d114358192ebd30bcf334455b240b58a",
+  "expected_groups": 11,
+  "parallelism": 1,
+  "warmup": false,
+  "repeat": 2,
+  "job_id": "e3562afb182bd65b97383526f03de2b2",
+  "flink_duration_ms": 168,
+  "client_wall_seconds": 2.1846374770002512,
+  "output_records": 36,
+  "effective_max_parallelism": 1,
+  "status": "passed",
+  "directory": "results/benchmark/20261023T083453979792Z/24_sf0.001_insert_p1_measure_2",
+  "events_per_job_second": 45565.47619047619
+}

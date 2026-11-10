@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "expected_groups": 11,
+  "actual_groups": 11,
+  "differences": [],
+  "empty_group_sentinels": []
+}

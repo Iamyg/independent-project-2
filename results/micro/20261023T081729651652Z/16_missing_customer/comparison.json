@@ -1,0 +1,20 @@
+{
+  "name": "16_missing_customer",
+  "category": "micro",
+  "status": "passed",
+  "job_id": "43579594b731cf87291e911222fbeabd",
+  "input_sha256": "a3b188f15e9aa8d50038524327c205605f6c9e243b06bb26debf8fd8842f50ee",
+  "input_events": 3,
+  "insert": 3,
+  "delete": 0,
+  "expected_groups": 0,
+  "actual_groups": 0,
+  "output_records": 0,
+  "empty_group_sentinels": [],
+  "differences": [],
+  "max_absolute_error": "0",
+  "parallelism": 1,
+  "client_wall_seconds": 2.0097396030005257,
+  "flink_duration_ms": 106,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703"
+}

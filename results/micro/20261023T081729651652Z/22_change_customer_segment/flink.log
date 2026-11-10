@@ -1,0 +1,6 @@
+COMMAND: ["/home/chai_guanpeng/cquirrel-repro/tools/flink-1.11.2/bin/flink", "run", "-p", "1", "/mnt/d/Learning/HKUST/ip/repro/generated/generated-code/target/generated-code-1.0-SNAPSHOT-jar-with-dependencies.jar", "--input", "file:///mnt/d/Learning/HKUST/ip/repro/data/micro/22_change_customer_segment/events.txt", "--output", "file:///mnt/d/Learning/HKUST/ip/repro/results/micro/20261023T081729651652Z/22_change_customer_segment/raw-output"]
+Job has been submitted with JobID 7c5dc082f27450ae876b64482cbc6bcd
+Program execution finished
+Job with JobID 7c5dc082f27450ae876b64482cbc6bcd has finished.
+Job Runtime: 90 ms
+

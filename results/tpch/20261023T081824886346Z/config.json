@@ -1,0 +1,12 @@
+{
+  "query": "Q3, paper section 2",
+  "segment": "AUTOMOBILE",
+  "date": "1995-03-13",
+  "tpch_scale_factor": 0.001,
+  "parallelism": 1,
+  "seed": 20261023,
+  "absolute_tolerance": "0.000001",
+  "relative_tolerance": "0.000000001",
+  "source_commit": "501cfde6dc2968cfccee992ab4f298c499cc8028",
+  "duckdb_version": "1.1.3"
+}

@@ -1,0 +1,321 @@
+{
+  "jid": "6e45e4dff0e7a84d870c1f33ad8507ac",
+  "name": "Cquirrel Q3 reproduction",
+  "isStoppable": false,
+  "state": "FINISHED",
+  "start-time": 1792743484233,
+  "end-time": 1792743484381,
+  "duration": 148,
+  "now": 1792743484496,
+  "timestamps": {
+    "CREATED": 1792743484233,
+    "FAILED": 0,
+    "SUSPENDED": 0,
+    "FAILING": 0,
+    "CANCELED": 0,
+    "RESTARTING": 0,
+    "RECONCILING": 0,
+    "FINISHED": 1792743484381,
+    "RUNNING": 1792743484234,
+    "CANCELLING": 0
+  },
+  "vertices": [
+    {
+      "id": "bc764cd8ddf7a0cff126f51c16239658",
+      "name": "Source: Custom File Source",
+      "parallelism": 1,
+      "status": "FINISHED",
+      "start-time": 1792743484242,
+      "end-time": 1792743484367,
+      "duration": 125,
+      "tasks": {
+        "FAILED": 0,
+        "FINISHED": 1,
+        "CANCELED": 0,
+        "CREATED": 0,
+        "SCHEDULED": 0,
+        "RECONCILING": 0,
+        "DEPLOYING": 0,
+        "RUNNING": 0,
+        "CANCELING": 0
+      },
+      "metrics": {
+        "read-bytes": 0,
+        "read-bytes-complete": true,
+        "write-bytes": 0,
+        "write-bytes-complete": true,
+        "read-records": 0,
+        "read-records-complete": true,
+        "write-records": 1,
+        "write-records-complete": true
+      }
+    },
+    {
+      "id": "20ba6b65f97481d5570070de90e4e791",
+      "name": "Split Reader: Custom File Source -> Process",
+      "parallelism": 1,
+      "status": "FINISHED",
+      "start-time": 1792743484243,
+      "end-time": 1792743484376,
+      "duration": 133,
+      "tasks": {
+        "FAILED": 0,
+        "FINISHED": 1,
+        "CANCELED": 0,
+        "CREATED": 0,
+        "SCHEDULED": 0,
+        "RECONCILING": 0,
+        "DEPLOYING": 0,
+        "RUNNING": 0,
+        "CANCELING": 0
+      },
+      "metrics": {
+        "read-bytes": 161,
+        "read-bytes-complete": true,
+        "write-bytes": 0,
+        "write-bytes-complete": true,
+        "read-records": 1,
+        "read-records-complete": true,
+        "write-records": 3,
+        "write-records-complete": true
+      }
+    },
+    {
+      "id": "47d89856a1cf553f16e7063d953b7d42",
+      "name": "KeyedProcess",
+      "parallelism": 1,
+      "status": "FINISHED",
+      "start-time": 1792743484243,
+      "end-time": 1792743484379,
+      "duration": 136,
+      "tasks": {
+        "FAILED": 0,
+        "FINISHED": 1,
+        "CANCELED": 0,
+        "CREATED": 0,
+        "SCHEDULED": 0,
+        "RECONCILING": 0,
+        "DEPLOYING": 0,
+        "RUNNING": 0,
+        "CANCELING": 0
+      },
+      "metrics": {
+        "read-bytes": 101,
+        "read-bytes-complete": true,
+        "write-bytes": 0,
+        "write-bytes-complete": true,
+        "read-records": 1,
+        "read-records-complete": true,
+        "write-records": 1,
+        "write-records-complete": true
+      }
+    },
+    {
+      "id": "734af1b642f39f08aa7664782e41b629",
+      "name": "Co-Keyed-Process",
+      "parallelism": 1,
+      "status": "FINISHED",
+      "start-time": 1792743484243,
+      "end-time": 1792743484379,
+      "duration": 136,
+      "tasks": {
+        "FAILED": 0,
+        "FINISHED": 1,
+        "CANCELED": 0,
+        "CREATED": 0,
+        "SCHEDULED": 0,
+        "RECONCILING": 0,
+        "DEPLOYING": 0,
+        "RUNNING": 0,
+        "CANCELING": 0
+      },
+      "metrics": {
+        "read-bytes": 247,
+        "read-bytes-complete": true,
+        "write-bytes": 0,
+        "write-bytes-complete": true,
+        "read-records": 2,
+        "read-records-complete": true,
+        "write-records": 0,
+        "write-records-complete": true
+      }
+    },
+    {
+      "id": "489e00eaa153428327f760bf7f06a904",
+      "name": "Co-Keyed-Process",
+      "parallelism": 1,
+      "status": "FINISHED",
+      "start-time": 1792743484243,
+      "end-time": 1792743484380,
+      "duration": 137,
+      "tasks": {
+        "FAILED": 0,
+        "FINISHED": 1,
+        "CANCELED": 0,
+        "CREATED": 0,
+        "SCHEDULED": 0,
+        "RECONCILING": 0,
+        "DEPLOYING": 0,
+        "RUNNING": 0,
+        "CANCELING": 0
+      },
+      "metrics": {
+        "read-bytes": 191,
+        "read-bytes-complete": true,
+        "write-bytes": 0,
+        "write-bytes-complete": true,
+        "read-records": 1,
+        "read-records-complete": true,
+        "write-records": 0,
+        "write-records-complete": true
+      }
+    },
+    {
+      "id": "895eea9da807be0f818cb6fa81bd0d04",
+      "name": "KeyedProcess -> Map -> Sink: Unnamed",
+      "parallelism": 1,
+      "status": "FINISHED",
+      "start-time": 1792743484243,
+      "end-time": 1792743484381,
+      "duration": 138,
+      "tasks": {
+        "FAILED": 0,
+        "FINISHED": 1,
+        "CANCELED": 0,
+        "CREATED": 0,
+        "SCHEDULED": 0,
+        "RECONCILING": 0,
+        "DEPLOYING": 0,
+        "RUNNING": 0,
+        "CANCELING": 0
+      },
+      "metrics": {
+        "read-bytes": 17,
+        "read-bytes-complete": true,
+        "write-bytes": 0,
+        "write-bytes-complete": true,
+        "read-records": 0,
+        "read-records-complete": true,
+        "write-records": 0,
+        "write-records-complete": true
+      }
+    }
+  ],
+  "status-counts": {
+    "FAILED": 0,
+    "FINISHED": 6,
+    "CANCELED": 0,
+    "CREATED": 0,
+    "SCHEDULED": 0,
+    "RECONCILING": 0,
+    "DEPLOYING": 0,
+    "RUNNING": 0,
+    "CANCELING": 0
+  },
+  "plan": {
+    "jid": "6e45e4dff0e7a84d870c1f33ad8507ac",
+    "name": "Cquirrel Q3 reproduction",
+    "nodes": [
+      {
+        "id": "895eea9da807be0f818cb6fa81bd0d04",
+        "parallelism": 1,
+        "operator": "",
+        "operator_strategy": "",
+        "description": "KeyedProcess -&gt; Map -&gt; Sink: Unnamed",
+        "inputs": [
+          {
+            "num": 0,
+            "id": "489e00eaa153428327f760bf7f06a904",
+            "ship_strategy": "HASH",
+            "exchange": "pipelined_bounded"
+          }
+        ],
+        "optimizer_properties": {}
+      },
+      {
+        "id": "489e00eaa153428327f760bf7f06a904",
+        "parallelism": 1,
+        "operator": "",
+        "operator_strategy": "",
+        "description": "Co-Keyed-Process",
+        "inputs": [
+          {
+            "num": 0,
+            "id": "734af1b642f39f08aa7664782e41b629",
+            "ship_strategy": "HASH",
+            "exchange": "pipelined_bounded"
+          },
+          {
+            "num": 1,
+            "id": "20ba6b65f97481d5570070de90e4e791",
+            "ship_strategy": "HASH",
+            "exchange": "pipelined_bounded"
+          }
+        ],
+        "optimizer_properties": {}
+      },
+      {
+        "id": "734af1b642f39f08aa7664782e41b629",
+        "parallelism": 1,
+        "operator": "",
+        "operator_strategy": "",
+        "description": "Co-Keyed-Process",
+        "inputs": [
+          {
+            "num": 0,
+            "id": "47d89856a1cf553f16e7063d953b7d42",
+            "ship_strategy": "HASH",
+            "exchange": "pipelined_bounded"
+          },
+          {
+            "num": 1,
+            "id": "20ba6b65f97481d5570070de90e4e791",
+            "ship_strategy": "HASH",
+            "exchange": "pipelined_bounded"
+          }
+        ],
+        "optimizer_properties": {}
+      },
+      {
+        "id": "47d89856a1cf553f16e7063d953b7d42",
+        "parallelism": 1,
+        "operator": "",
+        "operator_strategy": "",
+        "description": "KeyedProcess",
+        "inputs": [
+          {
+            "num": 0,
+            "id": "20ba6b65f97481d5570070de90e4e791",
+            "ship_strategy": "HASH",
+            "exchange": "pipelined_bounded"
+          }
+        ],
+        "optimizer_properties": {}
+      },
+      {
+        "id": "20ba6b65f97481d5570070de90e4e791",
+        "parallelism": 1,
+        "operator": "",
+        "operator_strategy": "",
+        "description": "Split Reader: Custom File Source -&gt; Process",
+        "inputs": [
+          {
+            "num": 0,
+            "id": "bc764cd8ddf7a0cff126f51c16239658",
+            "ship_strategy": "FORWARD",
+            "exchange": "pipelined_bounded"
+          }
+        ],
+        "optimizer_properties": {}
+      },
+      {
+        "id": "bc764cd8ddf7a0cff126f51c16239658",
+        "parallelism": 1,
+        "operator": "",
+        "operator_strategy": "",
+        "description": "Source: Custom File Source",
+        "optimizer_properties": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "07_delete_order",
+  "category": "micro",
+  "status": "passed",
+  "job_id": "dc07179d13102580c8bc98186ec7a66b",
+  "input_sha256": "df2e499212fac17da1314065787509ce0404b5731846f8dbf96381205d735879",
+  "input_events": 5,
+  "insert": 4,
+  "delete": 1,
+  "expected_groups": 0,
+  "actual_groups": 0,
+  "output_records": 0,
+  "empty_group_sentinels": [],
+  "differences": [],
+  "max_absolute_error": "0",
+  "parallelism": 1,
+  "client_wall_seconds": 2.5080582080008753,
+  "flink_duration_ms": 123,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703"
+}

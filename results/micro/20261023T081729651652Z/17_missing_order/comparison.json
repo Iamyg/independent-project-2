@@ -1,0 +1,20 @@
+{
+  "name": "17_missing_order",
+  "category": "micro",
+  "status": "passed",
+  "job_id": "c2689b7b1075976cdaf6e904139e4721",
+  "input_sha256": "27324bd0dae69ede349cd7dc95ee67355a4df33ef14f9a4a455f251eaf470556",
+  "input_events": 3,
+  "insert": 3,
+  "delete": 0,
+  "expected_groups": 0,
+  "actual_groups": 0,
+  "output_records": 0,
+  "empty_group_sentinels": [],
+  "differences": [],
+  "max_absolute_error": "0",
+  "parallelism": 1,
+  "client_wall_seconds": 2.356442935999439,
+  "flink_duration_ms": 115,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703"
+}

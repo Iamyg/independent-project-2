@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": 6,
+  "checks_description": [
+    "wrong amount",
+    "missing key",
+    "extra key",
+    "float tolerance",
+    "snapshot arrival order",
+    "zero sentinel"
+  ]
+}

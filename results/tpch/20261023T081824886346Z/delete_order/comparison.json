@@ -1,0 +1,20 @@
+{
+  "name": "delete_order",
+  "category": "tpch",
+  "status": "passed",
+  "job_id": "99df41192fb5dc69d29ecc02c822cb4a",
+  "input_sha256": "0edc7cb8b0f044efea5516db7996c1b56fdc7b9ff661fa968019560c215f6ba7",
+  "input_events": 7656,
+  "insert": 7655,
+  "delete": 1,
+  "expected_groups": 10,
+  "actual_groups": 10,
+  "output_records": 33,
+  "empty_group_sentinels": [],
+  "differences": [],
+  "max_absolute_error": "1E-11",
+  "parallelism": 1,
+  "client_wall_seconds": 2.1423308789999282,
+  "flink_duration_ms": 189,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703"
+}

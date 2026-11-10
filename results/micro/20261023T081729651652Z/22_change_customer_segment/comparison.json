@@ -1,0 +1,27 @@
+{
+  "name": "22_change_customer_segment",
+  "category": "micro",
+  "status": "passed",
+  "job_id": "7c5dc082f27450ae876b64482cbc6bcd",
+  "input_sha256": "5accef0ca4ee100499896d9aed934b1dc4c6247c20a720b6d9e96c86956072f4",
+  "input_events": 5,
+  "insert": 4,
+  "delete": 1,
+  "expected_groups": 0,
+  "actual_groups": 0,
+  "output_records": 2,
+  "empty_group_sentinels": [
+    [
+      101,
+      "1995-03-01",
+      0,
+      "0.0"
+    ]
+  ],
+  "differences": [],
+  "max_absolute_error": "0",
+  "parallelism": 1,
+  "client_wall_seconds": 2.034758253000291,
+  "flink_duration_ms": 90,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703"
+}

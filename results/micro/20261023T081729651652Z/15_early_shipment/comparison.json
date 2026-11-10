@@ -1,0 +1,20 @@
+{
+  "name": "15_early_shipment",
+  "category": "micro",
+  "status": "passed",
+  "job_id": "c0cdd9e10ad2202e8473aa158bb929c0",
+  "input_sha256": "225fddf610b1c5834989f90d6118cd7e9c2166c50c82217e340e3c01c00f65ef",
+  "input_events": 3,
+  "insert": 3,
+  "delete": 0,
+  "expected_groups": 0,
+  "actual_groups": 0,
+  "output_records": 0,
+  "empty_group_sentinels": [],
+  "differences": [],
+  "max_absolute_error": "0",
+  "parallelism": 1,
+  "client_wall_seconds": 2.3677419380001083,
+  "flink_duration_ms": 97,
+  "query_jar_sha256": "924ea6bec01b3e75af44fb04821bc1e7c57e500cdbc58d8643d2b3b6bd8da703"
+}

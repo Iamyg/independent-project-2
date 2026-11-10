@@ -1,0 +1,19 @@
+{
+  "scale_factors": [
+    0.001,
+    0.01
+  ],
+  "parallelisms": [
+    1,
+    2
+  ],
+  "scenarios": [
+    "insert",
+    "delete_10pct"
+  ],
+  "warmup_runs_per_configuration": 1,
+  "measured_runs_per_configuration": 3,
+  "shuffle_seed": 20261023,
+  "timing_definition": "Flink REST job duration including deployment, input, operators and file output; client wall time recorded separately",
+  "source_and_sink_parallelism": 1
+}
